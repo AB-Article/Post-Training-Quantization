@@ -1,0 +1,1373 @@
+{
+  "tau": 0.01,
+  "n_freeze": 150,
+  "freeze_design": {
+    "buckets": {
+      "gt_10ms": 38,
+      "5_to_10ms": 39,
+      "2_to_5ms": 37,
+      "lt_2ms": 36
+    },
+    "families": {
+      "named": 9,
+      "rag": 76,
+      "unq": 65
+    },
+    "mtk40": 40
+  },
+  "feasible_counts": {
+    "fp32": 150,
+    "fp16": 150,
+    "dynamic": 148,
+    "int8": 79,
+    "mixed": 77
+  },
+  "feasible_set_sizes": {
+    "2": 1,
+    "3": 70,
+    "4": 3,
+    "5": 76
+  },
+  "acc_coverage": 150,
+  "winrate_pure": {
+    "S25": {
+      "n": 150,
+      "pct": {
+        "fp32": 4.0,
+        "fp16": 0.6666666666666666,
+        "dynamic": 0.0,
+        "int8": 91.33333333333333,
+        "mixed": 4.0
+      },
+      "count": {
+        "fp32": 6,
+        "fp16": 1,
+        "dynamic": 0,
+        "int8": 137,
+        "mixed": 6
+      }
+    },
+    "S26": {
+      "n": 150,
+      "pct": {
+        "fp32": 4.0,
+        "fp16": 1.3333333333333333,
+        "dynamic": 0.0,
+        "int8": 93.33333333333333,
+        "mixed": 1.3333333333333333
+      },
+      "count": {
+        "fp32": 6,
+        "fp16": 2,
+        "dynamic": 0,
+        "int8": 140,
+        "mixed": 2
+      }
+    },
+    "MTK_D9400": {
+      "n": 40,
+      "pct": {
+        "fp32": 12.5,
+        "fp16": 42.5,
+        "dynamic": 32.5,
+        "int8": 7.5,
+        "mixed": 5.0
+      },
+      "count": {
+        "fp32": 5,
+        "fp16": 17,
+        "dynamic": 13,
+        "int8": 3,
+        "mixed": 2
+      }
+    },
+    "USB_Pixel4": {
+      "n": 150,
+      "pct": {
+        "fp32": 25.333333333333332,
+        "fp16": 30.0,
+        "dynamic": 25.333333333333332,
+        "int8": 9.333333333333334,
+        "mixed": 10.0
+      },
+      "count": {
+        "fp32": 38,
+        "fp16": 45,
+        "dynamic": 38,
+        "int8": 14,
+        "mixed": 15
+      }
+    },
+    "USB_TabS7": {
+      "n": 150,
+      "pct": {
+        "fp32": 22.666666666666668,
+        "fp16": 38.666666666666664,
+        "dynamic": 32.0,
+        "int8": 4.666666666666667,
+        "mixed": 2.0
+      },
+      "count": {
+        "fp32": 34,
+        "fp16": 58,
+        "dynamic": 48,
+        "int8": 7,
+        "mixed": 3
+      }
+    },
+    "USB_Redmi13": {
+      "n": 150,
+      "pct": {
+        "fp32": 24.666666666666668,
+        "fp16": 17.333333333333332,
+        "dynamic": 18.666666666666668,
+        "int8": 32.666666666666664,
+        "mixed": 6.666666666666667
+      },
+      "count": {
+        "fp32": 37,
+        "fp16": 26,
+        "dynamic": 28,
+        "int8": 49,
+        "mixed": 10
+      }
+    }
+  },
+  "winrate_constrained": {
+    "S25": {
+      "n": 150,
+      "pct": {
+        "fp32": 34.666666666666664,
+        "fp16": 14.0,
+        "dynamic": 0.0,
+        "int8": 48.666666666666664,
+        "mixed": 2.6666666666666665
+      },
+      "count": {
+        "fp32": 52,
+        "fp16": 21,
+        "dynamic": 0,
+        "int8": 73,
+        "mixed": 4
+      }
+    },
+    "S26": {
+      "n": 150,
+      "pct": {
+        "fp32": 32.0,
+        "fp16": 16.666666666666668,
+        "dynamic": 0.0,
+        "int8": 51.333333333333336,
+        "mixed": 0.0
+      },
+      "count": {
+        "fp32": 48,
+        "fp16": 25,
+        "dynamic": 0,
+        "int8": 77,
+        "mixed": 0
+      }
+    },
+    "MTK_D9400": {
+      "n": 40,
+      "pct": {
+        "fp32": 12.5,
+        "fp16": 45.0,
+        "dynamic": 35.0,
+        "int8": 5.0,
+        "mixed": 2.5
+      },
+      "count": {
+        "fp32": 5,
+        "fp16": 18,
+        "dynamic": 14,
+        "int8": 2,
+        "mixed": 1
+      }
+    },
+    "USB_Pixel4": {
+      "n": 150,
+      "pct": {
+        "fp32": 26.0,
+        "fp16": 31.333333333333332,
+        "dynamic": 35.333333333333336,
+        "int8": 2.0,
+        "mixed": 5.333333333333333
+      },
+      "count": {
+        "fp32": 39,
+        "fp16": 47,
+        "dynamic": 53,
+        "int8": 3,
+        "mixed": 8
+      }
+    },
+    "USB_TabS7": {
+      "n": 150,
+      "pct": {
+        "fp32": 24.666666666666668,
+        "fp16": 38.666666666666664,
+        "dynamic": 34.0,
+        "int8": 2.0,
+        "mixed": 0.6666666666666666
+      },
+      "count": {
+        "fp32": 37,
+        "fp16": 58,
+        "dynamic": 51,
+        "int8": 3,
+        "mixed": 1
+      }
+    },
+    "USB_Redmi13": {
+      "n": 150,
+      "pct": {
+        "fp32": 26.0,
+        "fp16": 20.0,
+        "dynamic": 33.333333333333336,
+        "int8": 18.0,
+        "mixed": 2.6666666666666665
+      },
+      "count": {
+        "fp32": 39,
+        "fp16": 30,
+        "dynamic": 50,
+        "int8": 27,
+        "mixed": 4
+      }
+    }
+  },
+  "main_agree_rows": [
+    [
+      "S25|S26",
+      "S25 vs S26",
+      false
+    ],
+    [
+      "S25|MTK_D9400",
+      "S25 vs Tab~S11",
+      true
+    ],
+    [
+      "S25|USB_Pixel4",
+      "S25 vs Pixel~4",
+      true
+    ],
+    [
+      "USB_Pixel4|USB_TabS7",
+      "Pixel~4 vs Tab~S7+",
+      false
+    ]
+  ],
+  "regret_rows": [
+    [
+      "S25|S26",
+      "S25 $\\rightarrow$ S26"
+    ],
+    [
+      "S26|S25",
+      "S26 $\\rightarrow$ S25"
+    ],
+    [
+      "S25|MTK_D9400",
+      "S25 $\\rightarrow$ Tab~S11"
+    ],
+    [
+      "MTK_D9400|S25",
+      "Tab~S11 $\\rightarrow$ S25"
+    ],
+    [
+      "USB_Pixel4|S25",
+      "USB Pixel~4 $\\rightarrow$ S25"
+    ],
+    [
+      "USB_Pixel4|USB_TabS7",
+      "USB Pixel~4 $\\rightarrow$ Tab~S7+"
+    ]
+  ],
+  "agree_pure": {
+    "MTK_D9400|S25": {
+      "n": 40,
+      "agree": 4,
+      "agree_pct": 10.0,
+      "chance_pct": 7.375000000000001,
+      "kappa": 0.028340080971659912
+    },
+    "S25|MTK_D9400": {
+      "n": 40,
+      "agree": 4,
+      "agree_pct": 10.0,
+      "chance_pct": 7.375,
+      "kappa": 0.02834008097165993
+    },
+    "S25|S26": {
+      "n": 150,
+      "agree": 142,
+      "agree_pct": 94.66666666666667,
+      "chance_pct": 85.46666666666667,
+      "kappa": 0.6330275229357797
+    },
+    "S25|USB_Pixel4": {
+      "n": 150,
+      "agree": 17,
+      "agree_pct": 11.333333333333332,
+      "chance_pct": 10.137777777777778,
+      "kappa": 0.013304317720955534
+    },
+    "S26|S25": {
+      "n": 150,
+      "agree": 142,
+      "agree_pct": 94.66666666666667,
+      "chance_pct": 85.46666666666667,
+      "kappa": 0.6330275229357797
+    },
+    "USB_Pixel4|S25": {
+      "n": 150,
+      "agree": 17,
+      "agree_pct": 11.333333333333332,
+      "chance_pct": 10.137777777777778,
+      "kappa": 0.013304317720955534
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "n": 150,
+      "agree": 45,
+      "agree_pct": 30.0,
+      "chance_pct": 26.084444444444443,
+      "kappa": 0.05297336299681318
+    }
+  },
+  "agree_constrained": {
+    "MTK_D9400|S25": {
+      "n": 40,
+      "agree": 7,
+      "agree_pct": 17.5,
+      "chance_pct": 12.125,
+      "kappa": 0.06116642958748221
+    },
+    "S25|MTK_D9400": {
+      "n": 40,
+      "agree": 7,
+      "agree_pct": 17.5,
+      "chance_pct": 12.125,
+      "kappa": 0.06116642958748221
+    },
+    "S25|S26": {
+      "n": 150,
+      "agree": 112,
+      "agree_pct": 74.66666666666667,
+      "chance_pct": 38.408888888888896,
+      "kappa": 0.5886852359647857
+    },
+    "S25|USB_Pixel4": {
+      "n": 150,
+      "agree": 24,
+      "agree_pct": 16.0,
+      "chance_pct": 14.515555555555556,
+      "kappa": 0.017365082666112086
+    },
+    "S26|S25": {
+      "n": 150,
+      "agree": 112,
+      "agree_pct": 74.66666666666667,
+      "chance_pct": 38.40888888888889,
+      "kappa": 0.5886852359647858
+    },
+    "USB_Pixel4|S25": {
+      "n": 150,
+      "agree": 24,
+      "agree_pct": 16.0,
+      "chance_pct": 14.515555555555554,
+      "kappa": 0.017365082666112117
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "n": 150,
+      "agree": 58,
+      "agree_pct": 38.666666666666664,
+      "chance_pct": 30.61777777777778,
+      "kappa": 0.11600794311703286
+    }
+  },
+  "regret_pure": {
+    "MTK_D9400|S25": {
+      "n": 38,
+      "median_pct": 194.8895642212692,
+      "mean_pct": 750.6802260420538,
+      "p90_pct": 2392.2077922077924,
+      "median_ms": 0.196,
+      "mean_ms": 1.6207894736842106
+    },
+    "S25|MTK_D9400": {
+      "n": 38,
+      "median_pct": 15.827780563969949,
+      "mean_pct": 49.26608522944141,
+      "p90_pct": 118.47104945717733,
+      "median_ms": 0.49974999999999925,
+      "mean_ms": 1.2324421052631578
+    },
+    "S25|S26": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.3565045589163148,
+      "p90_pct": 0.0,
+      "median_ms": 0.0,
+      "mean_ms": 0.0013133333333333304
+    },
+    "S25|USB_Pixel4": {
+      "n": 149,
+      "median_pct": 7.710470006640598,
+      "mean_pct": 29.750793316011283,
+      "p90_pct": 24.033149171270715,
+      "median_ms": 0.25839999999999996,
+      "mean_ms": 1.0796610738255035
+    },
+    "S26|S25": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.22974114560503237,
+      "p90_pct": 0.0,
+      "median_ms": 0.0,
+      "mean_ms": 0.003893333333333328
+    },
+    "USB_Pixel4|S25": {
+      "n": 149,
+      "median_pct": 152.5,
+      "mean_pct": 644.9768994374658,
+      "p90_pct": 2046.428571428571,
+      "median_ms": 0.197,
+      "mean_ms": 1.115744966442953
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "n": 150,
+      "median_pct": 0.9247005668693759,
+      "mean_pct": 7.395484365982423,
+      "p90_pct": 24.427428256070648,
+      "median_ms": 0.07835000000000014,
+      "mean_ms": 0.49662266666666677
+    }
+  },
+  "regret_constrained": {
+    "MTK_D9400|S25": {
+      "n": 38,
+      "median_pct": 135.6039515042658,
+      "mean_pct": 525.4531475222672,
+      "p90_pct": 1660.9243697478994,
+      "median_ms": 0.1595,
+      "mean_ms": 1.6098947368421053
+    },
+    "S25|MTK_D9400": {
+      "n": 40,
+      "median_pct": 17.778777927467548,
+      "mean_pct": 40.574751269856556,
+      "p90_pct": 118.13409329533523,
+      "median_ms": 0.47835000000000005,
+      "mean_ms": 0.8762525000000001
+    },
+    "S25|S26": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.22335318548011301,
+      "p90_pct": 0.7246376811594208,
+      "median_ms": 0.0,
+      "mean_ms": 0.001020000000000002
+    },
+    "S25|USB_Pixel4": {
+      "n": 150,
+      "median_pct": 4.429133444680313,
+      "mean_pct": 24.42184028636066,
+      "p90_pct": 28.95060233398813,
+      "median_ms": 0.17800000000000005,
+      "mean_ms": 1.0522353333333334
+    },
+    "S26|S25": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.3443866402596746,
+      "p90_pct": 1.0869565217391313,
+      "median_ms": 0.0,
+      "mean_ms": 0.004133333333333332
+    },
+    "USB_Pixel4|S25": {
+      "n": 147,
+      "median_pct": 122.35294117647058,
+      "mean_pct": 484.9960459108095,
+      "p90_pct": 1270.1421800947865,
+      "median_ms": 0.196,
+      "mean_ms": 1.2682993197278911
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "n": 150,
+      "median_pct": 0.47791706810887047,
+      "mean_pct": 5.121865747839847,
+      "p90_pct": 23.497267759562853,
+      "median_ms": 0.030850000000000044,
+      "mean_ms": 0.19506066666666674
+    }
+  },
+  "tol_constrained": {
+    "MTK_D9400|S25": {
+      "0.00": {
+        "n": 40,
+        "agree": 9,
+        "agree_pct": 22.5
+      },
+      "0.02": {
+        "n": 40,
+        "agree": 14,
+        "agree_pct": 35.0
+      },
+      "0.05": {
+        "n": 40,
+        "agree": 16,
+        "agree_pct": 40.0
+      },
+      "0.10": {
+        "n": 40,
+        "agree": 19,
+        "agree_pct": 47.5
+      }
+    },
+    "S25|MTK_D9400": {
+      "0.00": {
+        "n": 40,
+        "agree": 9,
+        "agree_pct": 22.5
+      },
+      "0.02": {
+        "n": 40,
+        "agree": 14,
+        "agree_pct": 35.0
+      },
+      "0.05": {
+        "n": 40,
+        "agree": 16,
+        "agree_pct": 40.0
+      },
+      "0.10": {
+        "n": 40,
+        "agree": 19,
+        "agree_pct": 47.5
+      }
+    },
+    "S25|S26": {
+      "0.00": {
+        "n": 150,
+        "agree": 120,
+        "agree_pct": 80.0
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      }
+    },
+    "S25|USB_Pixel4": {
+      "0.00": {
+        "n": 150,
+        "agree": 31,
+        "agree_pct": 20.666666666666668
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 61,
+        "agree_pct": 40.666666666666664
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 83,
+        "agree_pct": 55.333333333333336
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 103,
+        "agree_pct": 68.66666666666667
+      }
+    },
+    "S26|S25": {
+      "0.00": {
+        "n": 150,
+        "agree": 120,
+        "agree_pct": 80.0
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 150,
+        "agree_pct": 100.0
+      }
+    },
+    "USB_Pixel4|S25": {
+      "0.00": {
+        "n": 150,
+        "agree": 31,
+        "agree_pct": 20.666666666666668
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 61,
+        "agree_pct": 40.666666666666664
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 83,
+        "agree_pct": 55.333333333333336
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 103,
+        "agree_pct": 68.66666666666667
+      }
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "0.00": {
+        "n": 150,
+        "agree": 58,
+        "agree_pct": 38.666666666666664
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 116,
+        "agree_pct": 77.33333333333333
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 140,
+        "agree_pct": 93.33333333333333
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 146,
+        "agree_pct": 97.33333333333333
+      }
+    }
+  },
+  "tol_pure": {
+    "MTK_D9400|S25": {
+      "0.00": {
+        "n": 40,
+        "agree": 6,
+        "agree_pct": 15.0
+      },
+      "0.02": {
+        "n": 40,
+        "agree": 11,
+        "agree_pct": 27.5
+      },
+      "0.05": {
+        "n": 40,
+        "agree": 14,
+        "agree_pct": 35.0
+      },
+      "0.10": {
+        "n": 40,
+        "agree": 17,
+        "agree_pct": 42.5
+      }
+    },
+    "S25|MTK_D9400": {
+      "0.00": {
+        "n": 40,
+        "agree": 6,
+        "agree_pct": 15.0
+      },
+      "0.02": {
+        "n": 40,
+        "agree": 11,
+        "agree_pct": 27.5
+      },
+      "0.05": {
+        "n": 40,
+        "agree": 14,
+        "agree_pct": 35.0
+      },
+      "0.10": {
+        "n": 40,
+        "agree": 17,
+        "agree_pct": 42.5
+      }
+    },
+    "S25|S26": {
+      "0.00": {
+        "n": 150,
+        "agree": 143,
+        "agree_pct": 95.33333333333333
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      }
+    },
+    "S25|USB_Pixel4": {
+      "0.00": {
+        "n": 150,
+        "agree": 19,
+        "agree_pct": 12.666666666666666
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 44,
+        "agree_pct": 29.333333333333332
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 60,
+        "agree_pct": 40.0
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 95,
+        "agree_pct": 63.333333333333336
+      }
+    },
+    "S26|S25": {
+      "0.00": {
+        "n": 150,
+        "agree": 143,
+        "agree_pct": 95.33333333333333
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 149,
+        "agree_pct": 99.33333333333333
+      }
+    },
+    "USB_Pixel4|S25": {
+      "0.00": {
+        "n": 150,
+        "agree": 19,
+        "agree_pct": 12.666666666666666
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 44,
+        "agree_pct": 29.333333333333332
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 60,
+        "agree_pct": 40.0
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 95,
+        "agree_pct": 63.333333333333336
+      }
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "0.00": {
+        "n": 150,
+        "agree": 45,
+        "agree_pct": 30.0
+      },
+      "0.02": {
+        "n": 150,
+        "agree": 106,
+        "agree_pct": 70.66666666666667
+      },
+      "0.05": {
+        "n": 150,
+        "agree": 138,
+        "agree_pct": 92.0
+      },
+      "0.10": {
+        "n": 150,
+        "agree": 145,
+        "agree_pct": 96.66666666666667
+      }
+    }
+  },
+  "device_order": [
+    "USB_Redmi13",
+    "USB_Pixel4",
+    "USB_TabS7",
+    "MTK_D9400",
+    "S25",
+    "S26"
+  ],
+  "device_stack": {
+    "USB_Redmi13": "usb",
+    "USB_Pixel4": "usb",
+    "USB_TabS7": "usb",
+    "MTK_D9400": "benchmark_model",
+    "S25": "aihub",
+    "S26": "aihub"
+  },
+  "regret_matrix": {
+    "USB_Redmi13|USB_Redmi13": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    },
+    "USB_Redmi13|USB_Pixel4": {
+      "n": 150,
+      "median_pct": 1.593653076954792,
+      "mean_pct": 6.5569034282259855,
+      "p90_pct": 14.175692928627315,
+      "median_ms": 0.06650000000000045,
+      "mean_ms": 0.4593026666666669,
+      "same_stack": true
+    },
+    "USB_Redmi13|USB_TabS7": {
+      "n": 150,
+      "median_pct": 0.8597948878061619,
+      "mean_pct": 12.742461452297588,
+      "p90_pct": 40.582416822300615,
+      "median_ms": 0.046250000000000124,
+      "mean_ms": 0.5944786666666666,
+      "same_stack": true
+    },
+    "USB_Redmi13|MTK_D9400": {
+      "n": 40,
+      "median_pct": 18.6421205651641,
+      "mean_pct": 36.57486135549969,
+      "p90_pct": 90.44758185641335,
+      "median_ms": 0.30735,
+      "mean_ms": 0.6734875,
+      "same_stack": false
+    },
+    "USB_Redmi13|S25": {
+      "n": 147,
+      "median_pct": 78.72340425531917,
+      "mean_pct": 344.40276162595603,
+      "p90_pct": 1282.2784810126584,
+      "median_ms": 0.113,
+      "mean_ms": 0.8602585034013606,
+      "same_stack": false
+    },
+    "USB_Redmi13|S26": {
+      "n": 148,
+      "median_pct": 60.0,
+      "mean_pct": 351.2194771871215,
+      "p90_pct": 1212.2222222222222,
+      "median_ms": 0.060999999999999985,
+      "mean_ms": 0.8939932432432433,
+      "same_stack": false
+    },
+    "USB_Pixel4|USB_Redmi13": {
+      "n": 150,
+      "median_pct": 1.4872323726181849,
+      "mean_pct": 955972.7290553539,
+      "p90_pct": 63.636363636363626,
+      "median_ms": 0.19784999999999986,
+      "mean_ms": 11.435214666666667,
+      "same_stack": true
+    },
+    "USB_Pixel4|USB_Pixel4": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    },
+    "USB_Pixel4|USB_TabS7": {
+      "n": 150,
+      "median_pct": 0.47791706810887047,
+      "mean_pct": 5.121865747839847,
+      "p90_pct": 23.497267759562853,
+      "median_ms": 0.030850000000000044,
+      "mean_ms": 0.19506066666666674,
+      "same_stack": true
+    },
+    "USB_Pixel4|MTK_D9400": {
+      "n": 40,
+      "median_pct": 4.656527314832828,
+      "mean_pct": 36.42597653991901,
+      "p90_pct": 120.87385904533892,
+      "median_ms": 0.14684999999999993,
+      "mean_ms": 0.66953,
+      "same_stack": false
+    },
+    "USB_Pixel4|S25": {
+      "n": 147,
+      "median_pct": 122.35294117647058,
+      "mean_pct": 484.9960459108095,
+      "p90_pct": 1270.1421800947865,
+      "median_ms": 0.196,
+      "mean_ms": 1.2682993197278911,
+      "same_stack": false
+    },
+    "USB_Pixel4|S26": {
+      "n": 149,
+      "median_pct": 80.23255813953489,
+      "mean_pct": 454.3740386228715,
+      "p90_pct": 1451.5384615384614,
+      "median_ms": 0.082,
+      "mean_ms": 1.1997852348993288,
+      "same_stack": false
+    },
+    "USB_TabS7|USB_Redmi13": {
+      "n": 150,
+      "median_pct": 1.437384499127965,
+      "mean_pct": 578029.1306509634,
+      "p90_pct": 76.68452928306432,
+      "median_ms": 0.17460000000000075,
+      "mean_ms": 7.18766,
+      "same_stack": true
+    },
+    "USB_TabS7|USB_Pixel4": {
+      "n": 150,
+      "median_pct": 0.5286402611291168,
+      "mean_pct": 2.408408217039712,
+      "p90_pct": 5.387616284885472,
+      "median_ms": 0.0262,
+      "mean_ms": 0.18379600000000018,
+      "same_stack": true
+    },
+    "USB_TabS7|USB_TabS7": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    },
+    "USB_TabS7|MTK_D9400": {
+      "n": 40,
+      "median_pct": 0.0,
+      "mean_pct": 9.30532955687759,
+      "p90_pct": 27.74150755673473,
+      "median_ms": 0.0,
+      "mean_ms": 0.48992250000000004,
+      "same_stack": false
+    },
+    "USB_TabS7|S25": {
+      "n": 146,
+      "median_pct": 128.43837535014006,
+      "mean_pct": 476.13356461899906,
+      "p90_pct": 1607.627118644068,
+      "median_ms": 0.196,
+      "mean_ms": 1.1266301369863014,
+      "same_stack": false
+    },
+    "USB_TabS7|S26": {
+      "n": 148,
+      "median_pct": 76.83193763392799,
+      "mean_pct": 417.6953150354949,
+      "p90_pct": 1465.3846153846152,
+      "median_ms": 0.0715,
+      "mean_ms": 1.057135135135135,
+      "same_stack": false
+    },
+    "MTK_D9400|USB_Redmi13": {
+      "n": 40,
+      "median_pct": 3.492190880685009,
+      "mean_pct": 668898.8367995394,
+      "p90_pct": 77.45465538089479,
+      "median_ms": 0.6575499999999987,
+      "mean_ms": 8.4675425,
+      "same_stack": false
+    },
+    "MTK_D9400|USB_Pixel4": {
+      "n": 40,
+      "median_pct": 0.21940540970522282,
+      "mean_pct": 2.1731150194247832,
+      "p90_pct": 3.9145176204664445,
+      "median_ms": 0.004249999999999976,
+      "mean_ms": 0.11285250000000026,
+      "same_stack": false
+    },
+    "MTK_D9400|USB_TabS7": {
+      "n": 40,
+      "median_pct": 0.0,
+      "mean_pct": 1.5054063191394298,
+      "p90_pct": 4.856615721021353,
+      "median_ms": 0.0,
+      "mean_ms": 0.1082725000000003,
+      "same_stack": false
+    },
+    "MTK_D9400|MTK_D9400": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    },
+    "MTK_D9400|S25": {
+      "n": 38,
+      "median_pct": 135.6039515042658,
+      "mean_pct": 525.4531475222672,
+      "p90_pct": 1660.9243697478994,
+      "median_ms": 0.1595,
+      "mean_ms": 1.6098947368421053,
+      "same_stack": false
+    },
+    "MTK_D9400|S26": {
+      "n": 40,
+      "median_pct": 75.48213272830404,
+      "mean_pct": 528.8232149801743,
+      "p90_pct": 1752.1739130434783,
+      "median_ms": 0.072,
+      "mean_ms": 1.860325,
+      "same_stack": false
+    },
+    "S25|USB_Redmi13": {
+      "n": 150,
+      "median_pct": 2.7978544956472167,
+      "mean_pct": 825953.7041096408,
+      "p90_pct": 32.92407261998239,
+      "median_ms": 0.4687000000000001,
+      "mean_ms": 10.558432666666667,
+      "same_stack": false
+    },
+    "S25|USB_Pixel4": {
+      "n": 150,
+      "median_pct": 4.429133444680313,
+      "mean_pct": 24.42184028636066,
+      "p90_pct": 28.95060233398813,
+      "median_ms": 0.17800000000000005,
+      "mean_ms": 1.0522353333333334,
+      "same_stack": false
+    },
+    "S25|USB_TabS7": {
+      "n": 150,
+      "median_pct": 8.621177609087049,
+      "mean_pct": 30.77842562646208,
+      "p90_pct": 72.06669388565815,
+      "median_ms": 0.3581500000000002,
+      "mean_ms": 1.523802,
+      "same_stack": false
+    },
+    "S25|MTK_D9400": {
+      "n": 40,
+      "median_pct": 17.778777927467548,
+      "mean_pct": 40.574751269856556,
+      "p90_pct": 118.13409329533523,
+      "median_ms": 0.47835000000000005,
+      "mean_ms": 0.8762525000000001,
+      "same_stack": false
+    },
+    "S25|S25": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    },
+    "S25|S26": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.22335318548011301,
+      "p90_pct": 0.7246376811594208,
+      "median_ms": 0.0,
+      "mean_ms": 0.001020000000000002,
+      "same_stack": true
+    },
+    "S26|USB_Redmi13": {
+      "n": 150,
+      "median_pct": 2.761017381717404,
+      "mean_pct": 825874.1198838779,
+      "p90_pct": 34.23373521087752,
+      "median_ms": 0.47655000000000003,
+      "mean_ms": 10.586618,
+      "same_stack": false
+    },
+    "S26|USB_Pixel4": {
+      "n": 150,
+      "median_pct": 5.5735939964530665,
+      "mean_pct": 25.64556824482042,
+      "p90_pct": 30.00732291013959,
+      "median_ms": 0.18789999999999984,
+      "mean_ms": 1.0965986666666667,
+      "same_stack": false
+    },
+    "S26|USB_TabS7": {
+      "n": 150,
+      "median_pct": 8.621177609087049,
+      "mean_pct": 38.02437148638925,
+      "p90_pct": 76.29474303322445,
+      "median_ms": 0.3649500000000001,
+      "mean_ms": 1.6222673333333333,
+      "same_stack": false
+    },
+    "S26|MTK_D9400": {
+      "n": 40,
+      "median_pct": 14.543731462674753,
+      "mean_pct": 41.29053902346512,
+      "p90_pct": 119.73409023005678,
+      "median_ms": 0.3904999999999997,
+      "mean_ms": 0.96206,
+      "same_stack": false
+    },
+    "S26|S25": {
+      "n": 150,
+      "median_pct": 0.0,
+      "mean_pct": 0.3443866402596746,
+      "p90_pct": 1.0869565217391313,
+      "median_ms": 0.0,
+      "mean_ms": 0.004133333333333332,
+      "same_stack": true
+    },
+    "S26|S26": {
+      "n": null,
+      "median_pct": 0.0,
+      "same_stack": true
+    }
+  },
+  "triple_pure": {
+    "n": 40,
+    "agree": 3,
+    "agree_pct": 7.5
+  },
+  "triple_constrained": {
+    "n": 40,
+    "agree": 5,
+    "agree_pct": 12.5
+  },
+  "winner_latency_ms": {
+    "S25": {
+      "n": 150,
+      "min": 0.053,
+      "q1": 0.089,
+      "median": 0.20850000000000002,
+      "q3": 0.489,
+      "max": 10.65
+    },
+    "S26": {
+      "n": 150,
+      "min": 0.054,
+      "q1": 0.091,
+      "median": 0.155,
+      "q3": 0.444,
+      "max": 12.056
+    },
+    "MTK_D9400": {
+      "n": 40,
+      "min": 0.0396,
+      "q1": 0.8981,
+      "median": 1.7528000000000001,
+      "q3": 3.9377,
+      "max": 22.9969
+    },
+    "USB_Pixel4": {
+      "n": 150,
+      "min": 0.1482,
+      "q1": 1.7164,
+      "median": 3.86745,
+      "q3": 8.4363,
+      "max": 106.914
+    },
+    "USB_TabS7": {
+      "n": 149,
+      "min": 1.2071,
+      "q1": 1.7934,
+      "median": 3.9835,
+      "q3": 7.6526,
+      "max": 83.6685
+    },
+    "USB_Redmi13": {
+      "n": 137,
+      "min": 0.2366,
+      "q1": 4.9579,
+      "median": 11.5541,
+      "q3": 21.0097,
+      "max": 109.495
+    }
+  },
+  "winner_latency_excluded": {
+    "S25": 0,
+    "S26": 0,
+    "MTK_D9400": 0,
+    "USB_Pixel4": 0,
+    "USB_TabS7": 1,
+    "USB_Redmi13": 13
+  },
+  "tie_counts": {
+    "S25": {
+      "pure": {
+        "n": 150,
+        "ties": 2,
+        "tie_pct": 1.3333333333333333,
+        "patterns": {
+          "fp32+fp16": 2
+        }
+      },
+      "constrained": {
+        "n": 150,
+        "ties": 13,
+        "tie_pct": 8.666666666666666,
+        "patterns": {
+          "fp32+fp16": 13
+        }
+      }
+    },
+    "S26": {
+      "pure": {
+        "n": 150,
+        "ties": 1,
+        "tie_pct": 0.6666666666666666,
+        "patterns": {
+          "fp32+fp16": 1
+        }
+      },
+      "constrained": {
+        "n": 150,
+        "ties": 5,
+        "tie_pct": 3.3333333333333335,
+        "patterns": {
+          "fp32+fp16": 5
+        }
+      }
+    },
+    "MTK_D9400": {
+      "pure": {
+        "n": 40,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      },
+      "constrained": {
+        "n": 40,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      }
+    },
+    "USB_Pixel4": {
+      "pure": {
+        "n": 150,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      },
+      "constrained": {
+        "n": 150,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      }
+    },
+    "USB_TabS7": {
+      "pure": {
+        "n": 150,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      },
+      "constrained": {
+        "n": 150,
+        "ties": 0,
+        "tie_pct": 0.0,
+        "patterns": {}
+      }
+    },
+    "USB_Redmi13": {
+      "pure": {
+        "n": 150,
+        "ties": 12,
+        "tie_pct": 8.0,
+        "patterns": {
+          "fp32+fp16": 10,
+          "int8+mixed": 2
+        }
+      },
+      "constrained": {
+        "n": 150,
+        "ties": 12,
+        "tie_pct": 8.0,
+        "patterns": {
+          "fp32+fp16": 11,
+          "int8+mixed": 1
+        }
+      }
+    }
+  },
+  "mtk_coverage": {
+    "rows": 774,
+    "n_models": 40,
+    "status": {
+      "ok": 490,
+      "failed": 210,
+      "push_failed": 74
+    },
+    "per_mode_backend_ok": {
+      "fp32|cpu": 40,
+      "fp32|gpu": 39,
+      "fp32|npu": 34,
+      "fp16|cpu": 40,
+      "fp16|gpu": 39,
+      "fp16|npu": 34,
+      "dynamic|cpu": 40,
+      "dynamic|gpu": 39,
+      "dynamic|npu": 31,
+      "int8|cpu": 38,
+      "int8|gpu": 38,
+      "int8|npu": 1,
+      "mixed|cpu": 38,
+      "mixed|gpu": 38,
+      "mixed|npu": 1
+    },
+    "per_mode_any_backend_ok": {
+      "fp32": 40,
+      "fp16": 40,
+      "dynamic": 40,
+      "int8": 38,
+      "mixed": 38
+    },
+    "models_all_five_modes": 38,
+    "runtime_version_recorded": false
+  },
+  "stack_control": {
+    "Galaxy Tab S7+": {
+      "n_scored": 18,
+      "match": 4,
+      "match_pct": 22.22222222222222,
+      "usb_over_aihub_ms_ratio_median": 0.945658326658966,
+      "mode_rank_spearman_median": 0.5,
+      "mode_rank_spearman_mean": 0.3333333333333333,
+      "n_models": 20,
+      "aihub_device": "Samsung Galaxy Tab S7",
+      "same_device": false
+    },
+    "Pixel 4": {
+      "n_scored": 18,
+      "match": 3,
+      "match_pct": 16.666666666666668,
+      "usb_over_aihub_ms_ratio_median": 1.0426999329546005,
+      "mode_rank_spearman_median": 0.45,
+      "mode_rank_spearman_mean": 0.25555555555555554,
+      "n_models": 20,
+      "aihub_device": "Google Pixel 4",
+      "same_device": true
+    },
+    "pooled": {
+      "n_scored": 36,
+      "match": 7,
+      "match_pct": 19.444444444444443,
+      "usb_over_aihub_ms_ratio_median": 0.9562960688675055,
+      "mode_rank_spearman_median": 0.5,
+      "mode_rank_spearman_mean": 0.29444444444444445,
+      "log_latency_pearson_r": 0.7747906402822965,
+      "n_mode_pairs": 163
+    }
+  }
+}

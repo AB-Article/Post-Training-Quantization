@@ -1,0 +1,19 @@
+{
+  "_comment": [
+    "Values plotted by make_fig_extra.py:replication() -> figures/fig17_replication.png.",
+    "This figure contrasts the authors' full-corpus snapshot of the benchmarking",
+    "records with the smaller subset that was public at the time of that snapshot.",
+    "Neither series is recomputable from the files shipped here: the full corpus is",
+    "the authors' private snapshot (supplement Section S-VI), and the 202-architecture",
+    "released subset is a historical state of the public repository that the current",
+    "records under results/v83/ have since superseded.  The four plotted numbers are",
+    "therefore carried here, exactly as in the published figure, in the same way that",
+    "export_gap_values.json and im100_checkpoint_gap_values.json carry their histograms.",
+    "The figure appears in neither main.tex nor supplementary.tex; it is kept only for",
+    "traceability.  Series order: [best mode changes with device, architecture-only",
+    "match rate], both in percent."
+  ],
+  "full_corpus": [83.2, 66.6],
+  "released_subset": [81.2, 66.3],
+  "released_n": 202
+}

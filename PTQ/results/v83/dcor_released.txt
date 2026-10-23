@@ -1,0 +1,4 @@
+cifar10 {'log model size': np.float64(0.38), 'model family': np.float64(0.34), 'device identity': np.float64(0.24), 'log best latency': np.float64(0.34), 'input resolution': np.float64(0.08), 'FP32 accuracy': np.float64(0.15)}
+   acc change ~ mode 0.191  ~ device 0.043
+imagenet100 {'log model size': np.float64(0.3), 'model family': np.float64(0.21), 'device identity': np.float64(0.14), 'log best latency': np.float64(0.24), 'input resolution': None, 'FP32 accuracy': np.float64(0.25)}
+   acc change ~ mode 0.454  ~ device 0.018

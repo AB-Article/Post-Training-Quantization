@@ -1,0 +1,13 @@
+Always dynamic INT8              geo%  105.3   17.6    2.4   ms  0.53  0.94  0.63
+Per-device order                 geo%   33.3   13.2   13.3   ms  0.17  0.63  2.21
+Per-arch. majority (oracle)      geo%   13.0    8.0    1.8   ms  0.13  0.31  0.35
+Selector (GBT)                   geo%    9.5    5.9    2.5   ms  0.06  0.20  0.81
+models per class: {'<2 ms': 429, '2–10 ms': 312, '≥10 ms': 444}
+
+fastest-backend share (%), CIFAR-10 valid runs:
+fastest    cpu   gpu   npu
+device                    
+Pixel 4   30.2  61.7   8.1
+Redmi 13   0.8  42.0  57.2
+Tab S7+   34.5  54.8  10.6
+Tab S11   14.8  78.1   7.1

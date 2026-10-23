@@ -1,0 +1,43 @@
+pool A (unconstrained): 3995 model-device pairs, 1338 architectures
+pool B (constrained tau=0.01): 3539 pairs, 1185 architectures
+
+=== POOL A unconstrained ===
+  device-dependence   89.2%  95% CI [87.5, 90.9]
+  arch-only oracle majority  exact  62.9%  regret med   0.0%  geo   9.0%  p90   58.7%
+  global fp32                exact   6.0%  regret med  57.2%  geo  74.3%  p90  335.6%
+  global fp16                exact  27.7%  regret med  11.2%  geo  38.6%  p90  142.1%
+  global mixed               exact  18.3%  regret med   9.4%  geo  37.3%  p90  145.3%
+  global dynamic             exact  33.7%  regret med   3.3%  geo  37.3%  p90  230.7%
+  global int8                exact  14.3%  regret med   7.7%  geo  29.6%  p90  124.2%
+    arch-only exact 95% CI [61.9, 63.9]
+    arch-only geo-regret 95% CI [8.3, 9.6]
+  winner margin to runner-up: median 6.0%, 32.9% below 2%, 47.7% below 5%
+  winner significantly faster than runner-up (Welch, alpha=.05): 63.0% of 3995 pairs
+  eps=   0%  device-dependence  89.2%  (n=1320 architectures)
+  eps=   2%  device-dependence  67.7%  (n=1320 architectures)
+  eps=   5%  device-dependence  52.3%  (n=1320 architectures)
+  eps=  10%  device-dependence  41.0%  (n=1320 architectures)
+  Monte Carlo (500 draws, n=1320): device-dependence 89.2% [88.1, 90.3], label stability 85.7%
+
+=== POOL B constrained ===
+  device-dependence   83.1%  95% CI [81.0, 85.3]
+  arch-only oracle majority  exact  66.1%  regret med   0.0%  geo   7.4%  p90   32.7%
+  global fp32                exact   8.6%  regret med  46.7%  geo  70.0%  p90  338.2%
+  global fp16                exact  32.1%  regret med   5.0%  geo  31.4%  p90  114.0%
+  global mixed               exact  13.0%  regret med  10.2%  geo  43.3%  p90  170.9%
+  global dynamic             exact  35.4%  regret med   2.1%  geo  36.8%  p90  238.4%
+  global int8                exact  10.9%  regret med   8.0%  geo  37.6%  p90  152.6%
+    arch-only exact 95% CI [65.0, 67.3]
+    arch-only geo-regret 95% CI [6.8, 8.1]
+  winner margin to runner-up: median 7.3%, 31.3% below 2%, 45.1% below 5%
+  winner significantly faster than runner-up (Welch, alpha=.05): 63.4% of 3515 pairs
+  eps=   0%  device-dependence  83.1%  (n=1169 architectures)
+  eps=   2%  device-dependence  62.0%  (n=1169 architectures)
+  eps=   5%  device-dependence  47.0%  (n=1169 architectures)
+  eps=  10%  device-dependence  36.0%  (n=1169 architectures)
+  Monte Carlo (500 draws, n=1169): device-dependence 83.8% [82.6, 84.9], label stability 86.0%
+
+
+real	2m31.558s
+user	2m26.846s
+sys	0m0.300s

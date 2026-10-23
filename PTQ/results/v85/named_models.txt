@@ -1,0 +1,56 @@
+== cifar10: 23 named architectures, 68 pairs
+          model  px  acc    mb  single   r1   Redmi 13   Pixel 4   Tab S7+
+         DPN107  32 70.8   0.1    fp16  1.3    Mix 2.6  FP16 1.1  FP16 0.8
+       Diffuser  32 16.3   0.2 dynamic  0.0    Dyn 2.9   Dyn 1.0   Dyn 0.7
+         DPN131  32 76.7   0.2 dynamic  3.7    Mix 4.1  FP16 1.4   Dyn 2.5
+          DPN68  32 27.4   0.2   mixed  5.7    Mix 4.1  FP32 1.4  FP32 2.1
+         UNet2D  32 47.1   2.1 dynamic 15.1    Dyn 7.7   Dyn 4.1  FP16 4.4
+    MobileNetV3 512 59.7   2.3    fp16  2.3  FP16 27.4   Dyn 7.7  FP32 7.1
+   SqueezeNet-1 299 77.7   2.9    int8  2.1  FP16 58.6    I8 9.2   I8 10.6
+     ShuffleNet 299 88.6   4.9 dynamic  0.0   Dyn 51.6  Dyn 22.2  Dyn 33.0
+        AirNext 256 80.6   5.8    fp32  1.7  FP32 33.7   Dyn 8.4 FP16 11.9
+    MobileNetV2 299 67.4   8.5    fp16  0.4  FP16 30.4   Dyn 9.0  FP32 9.0
+       DenseNet 128  8.9   8.8 dynamic  4.2    I8 31.6  Dyn 14.2   Dyn 9.8
+        DarkNet  32 48.4  14.0 dynamic  1.6   FP16 9.8   Dyn 4.1   Dyn 3.0
+         RegNet 299 91.5  15.0    fp16  0.1  FP16 38.7 FP32 12.6 FP16 10.2
+   EfficientNet 256 60.1  15.4    fp16  0.1  FP16 38.5 FP16 10.1  FP32 8.9
+         AirNet 128 87.8  18.7    fp16  1.5  FP16 28.4 FP32 10.2   Dyn 9.8
+      GoogLeNet 299 89.8  21.4    fp32  0.4  FP32 87.2 FP32 29.9 FP16 25.6
+         ResNet 256 30.8  42.7    fp16  0.1  FP16 62.8 FP16 22.4 FP32 20.2
+  InceptionV3-1 256 16.6  83.2    fp32  0.0 FP32 147.7 FP32 46.7 FP32 40.9
+SwinTransformer 299 73.1 106.6 dynamic  0.0         -- Dyn 638.8 Dyn 425.3
+     FractalNet  32 51.3 128.7 dynamic  1.8    I8 61.7  Mix 18.1  Dyn 18.2
+       ConvNeXt 128 72.6 188.8    fp32  1.1 FP32 136.7 FP32 41.3 FP16 36.8
+        AlexNet 299 87.7 217.6 dynamic  0.1    I8 64.7  Dyn 26.5  Dyn 20.2
+         BagNet  32 32.9   NaN dynamic  0.0    Dyn 1.1   Dyn 0.5   Dyn 0.3
+  depth-3 rules  on named: exact 39.7 geo 9.1 p90 42.4 | on all pairs: exact 65.0 geo 8.1
+  look-up rule   on named: exact 36.8 geo 10.2 p90 49.0 | on all pairs: exact 58.7 geo 10.2
+  best single artifact on named models: geo regret 1.9% ; on generated: 5.9%
+  named models labeled on all 3 devices: 22; winner differs on some device for 82%
+  winner share (named): {'dynamic': 37.0, 'fp16': 26.0, 'fp32': 24.0, 'int8': 7.0, 'mixed': 6.0}
+== imagenet100: 19 named architectures, 56 pairs
+        model  px  acc    mb  single   r1   Redmi 13   Pixel 4   Tab S7+
+       DPN107 160 31.2   0.1    fp32  0.1  FP32 15.8  FP32 6.1   Dyn 5.3
+     Diffuser 160 27.3   0.2 dynamic 12.1  FP16 74.8 FP16 24.5  Dyn 25.0
+       DPN131 160 42.0   0.2    fp32  0.2  FP32 52.1 FP16 16.1 FP32 11.9
+        DPN68 160 42.3   0.2    fp32  0.1  FP32 51.5 FP32 16.0  Dyn 12.0
+        ICNet 160 46.5   0.4 dynamic  0.0    Dyn 6.2   Dyn 2.9   Dyn 1.9
+       UNet2D 160 47.3   2.2 dynamic  0.0 FP32 261.8 FP32 57.5  Dyn 54.4
+ SqueezeNet-1 160 36.7   3.0 dynamic  0.0   Dyn 20.2   Dyn 6.5  FP32 6.6
+       BagNet 160 67.4   5.0    fp32  0.4  FP32 12.2   Dyn 5.3  FP32 5.0
+   ShuffleNet 160 73.0   5.3 dynamic  0.0   Dyn 14.8   Dyn 7.0   Dyn 4.5
+  MobileNetV2 160 72.8   9.0 dynamic  2.5   Dyn 11.6  FP16 4.5  FP32 4.2
+     DenseNet 160 71.9   9.7    fp32  0.1  FP32 49.0 FP16 20.0 FP32 22.0
+      DarkNet 160 75.9  14.2    fp32  0.4   Dyn 87.1 FP16 29.9  Dyn 22.7
+       RegNet 160 73.8  15.2    fp32  0.5  FP32 17.7  FP32 5.6  FP16 6.3
+ EfficientNet 160 74.8  15.9 dynamic  1.1   Dyn 25.5  FP16 7.1  FP32 6.7
+       ResNet 160 74.5  42.8 dynamic  0.5   Dyn 37.8 FP32 15.5 FP32 11.9
+InceptionV3-1 160 71.3  83.9 dynamic  0.6  FP32 64.3 FP16 27.9  Dyn 24.4
+   FractalNet 160 77.8 133.6    fp32  0.0         -- Dyn 421.5 Dyn 302.2
+      AlexNet 160 37.2 219.2 dynamic  5.2    I8 29.5  Dyn 11.1   Dyn 8.4
+          VGG 160 65.5 493.2 dynamic  0.0  Dyn 121.4  Dyn 72.9  Dyn 54.3
+  depth-3 rules  on named: exact 32.1 geo 10.4 p90 21.1 | on all pairs: exact 51.5 geo 3.2
+  look-up rule   on named: exact 37.5 geo 11.9 p90 43.7 | on all pairs: exact 48.4 geo 3.8
+  best single artifact on named models: geo regret 1.2% ; on generated: 1.6%
+  named models labeled on all 3 devices: 18; winner differs on some device for 83%
+  winner share (named): {'dynamic': 46.0, 'fp32': 36.0, 'fp16': 16.0, 'int8': 2.0}

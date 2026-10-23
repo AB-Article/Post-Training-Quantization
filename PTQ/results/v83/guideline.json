@@ -1,0 +1,252 @@
+{
+ "cifar10": {
+  "corpus": "cifar10",
+  "n": 3539,
+  "lookup_cv": {
+   "exact": 58.688895168126585,
+   "geo": 10.242095169149312,
+   "p90": 27.306319559252536,
+   "ms_mean": 0.483915163888104,
+   "ms_p90": 0.8461102
+  },
+  "cells": {
+   "Redmi 13|0": {
+    "order": [
+     "dynamic",
+     "mixed",
+     "int8"
+    ],
+    "n": 592,
+    "top_share": 30.0
+   },
+   "Redmi 13|1": {
+    "order": [
+     "mixed",
+     "dynamic",
+     "fp16"
+    ],
+    "n": 201,
+    "top_share": 40.0
+   },
+   "Redmi 13|2": {
+    "order": [
+     "mixed",
+     "dynamic",
+     "fp16"
+    ],
+    "n": 373,
+    "top_share": 39.0
+   },
+   "Pixel 4|0": {
+    "order": [
+     "fp16",
+     "dynamic",
+     "fp32"
+    ],
+    "n": 593,
+    "top_share": 62.0
+   },
+   "Pixel 4|1": {
+    "order": [
+     "dynamic",
+     "fp32",
+     "fp16"
+    ],
+    "n": 201,
+    "top_share": 53.0
+   },
+   "Pixel 4|2": {
+    "order": [
+     "dynamic",
+     "fp16",
+     "fp32"
+    ],
+    "n": 388,
+    "top_share": 71.0
+   },
+   "Tab S7+|0": {
+    "order": [
+     "fp16",
+     "int8",
+     "dynamic"
+    ],
+    "n": 593,
+    "top_share": 65.0
+   },
+   "Tab S7+|1": {
+    "order": [
+     "fp16",
+     "dynamic",
+     "fp32"
+    ],
+    "n": 201,
+    "top_share": 39.0
+   },
+   "Tab S7+|2": {
+    "order": [
+     "dynamic",
+     "fp16",
+     "int8"
+    ],
+    "n": 388,
+    "top_share": 79.0
+   }
+  },
+  "tree": {
+   "2": {
+    "exact": 62.418762362249225,
+    "geo": 8.723097971272221,
+    "p90": 16.919768679299008,
+    "ms_mean": 0.3731093082791749,
+    "ms_p90": 0.8182756000000014
+   },
+   "3": {
+    "exact": 65.04662333992654,
+    "geo": 8.099611204007505,
+    "p90": 12.911515374395188,
+    "ms_mean": 0.3203024747103702,
+    "ms_p90": 0.6458086000000018
+   },
+   "4": {
+    "exact": 64.42497880757276,
+    "geo": 9.114798746112719,
+    "p90": 15.26928883882559,
+    "ms_mean": 0.40606472817179995,
+    "ms_p90": 0.7357420000000015
+   },
+   "6": {
+    "exact": 65.89432042949987,
+    "geo": 8.122617547734912,
+    "p90": 13.234617718391405,
+    "ms_mean": 0.36856125459169253,
+    "ms_p90": 0.6824560000000026
+   }
+  },
+  "tree_rules_depth3": "|--- size_dynamic_kib <= 1180.340\n|   |--- device=Redmi 13 <= 0.500\n|   |   |--- size_fp32_kib <= 391.265\n|   |   |   |--- class: fp16\n|   |   |--- size_fp32_kib >  391.265\n|   |   |   |--- class: fp16\n|   |--- device=Redmi 13 >  0.500\n|   |   |--- accdrop_int8 <= 0.004\n|   |   |   |--- class: mixed\n|   |   |--- accdrop_int8 >  0.004\n|   |   |   |--- class: dynamic\n|--- size_dynamic_kib >  1180.340\n|   |--- device=Redmi 13 <= 0.500\n|   |   |--- in_px <= 10240.000\n|   |   |   |--- class: dynamic\n|   |   |--- in_px >  10240.000\n|   |   |   |--- class: dynamic\n|   |--- device=Redmi 13 >  0.500\n|   |   |--- in_w <= 48.000\n|   |   |   |--- class: mixed\n|   |   |--- in_w >  48.000\n|   |   |   |--- class: dynamic\n"
+ },
+ "imagenet100": {
+  "corpus": "imagenet100",
+  "n": 5047,
+  "lookup_cv": {
+   "exact": 48.365365563701204,
+   "geo": 3.7524939800456014,
+   "p90": 7.040515322471452,
+   "ms_mean": 0.5942981610857935,
+   "ms_p90": 1.3690840000000062
+  },
+  "cells": {
+   "Redmi 13|0": {
+    "order": [
+     "fp32",
+     "dynamic",
+     "int8"
+    ],
+    "n": 640,
+    "top_share": 29.0
+   },
+   "Redmi 13|1": {
+    "order": [
+     "dynamic",
+     "fp16",
+     "fp32"
+    ],
+    "n": 304,
+    "top_share": 43.0
+   },
+   "Redmi 13|2": {
+    "order": [
+     "dynamic",
+     "int8",
+     "fp32"
+    ],
+    "n": 717,
+    "top_share": 70.0
+   },
+   "Pixel 4|0": {
+    "order": [
+     "fp16",
+     "fp32",
+     "dynamic"
+    ],
+    "n": 640,
+    "top_share": 38.0
+   },
+   "Pixel 4|1": {
+    "order": [
+     "fp16",
+     "dynamic",
+     "fp32"
+    ],
+    "n": 304,
+    "top_share": 37.0
+   },
+   "Pixel 4|2": {
+    "order": [
+     "dynamic",
+     "fp16",
+     "fp32"
+    ],
+    "n": 746,
+    "top_share": 50.0
+   },
+   "Tab S7+|0": {
+    "order": [
+     "fp16",
+     "fp32",
+     "dynamic"
+    ],
+    "n": 640,
+    "top_share": 55.0
+   },
+   "Tab S7+|1": {
+    "order": [
+     "dynamic",
+     "fp32",
+     "fp16"
+    ],
+    "n": 304,
+    "top_share": 37.0
+   },
+   "Tab S7+|2": {
+    "order": [
+     "dynamic",
+     "fp32",
+     "fp16"
+    ],
+    "n": 746,
+    "top_share": 54.0
+   }
+  },
+  "tree": {
+   "2": {
+    "exact": 48.365365563701204,
+    "geo": 4.318848926349883,
+    "p90": 7.273520901007902,
+    "ms_mean": 0.6726742659005349,
+    "ms_p90": 1.34146
+   },
+   "3": {
+    "exact": 51.51575193184069,
+    "geo": 3.2171979263093453,
+    "p90": 5.537939658833335,
+    "ms_mean": 0.5997880188230632,
+    "ms_p90": 0.9084800000000001
+   },
+   "4": {
+    "exact": 51.6544481870418,
+    "geo": 3.1029103886043297,
+    "p90": 4.931358544648501,
+    "ms_mean": 0.5742995981771348,
+    "ms_p90": 0.8376600000000005
+   },
+   "6": {
+    "exact": 55.10204081632652,
+    "geo": 2.614049916369332,
+    "p90": 4.247593099696689,
+    "ms_mean": 0.47561233762631266,
+    "ms_p90": 0.7163260000000012
+   }
+  },
+  "tree_rules_depth3": "|--- size_fp16_kib <= 4094.680\n|   |--- device=Redmi 13 <= 0.500\n|   |   |--- size_fp32_kib <= 35.855\n|   |   |   |--- class: fp16\n|   |   |--- size_fp32_kib >  35.855\n|   |   |   |--- class: fp16\n|   |--- device=Redmi 13 >  0.500\n|   |   |--- accdrop_int8 <= 0.003\n|   |   |   |--- class: int8\n|   |   |--- accdrop_int8 >  0.003\n|   |   |   |--- class: dynamic\n|--- size_fp16_kib >  4094.680\n|   |--- accdrop_mixed <= 0.008\n|   |   |--- size_mixed_kib <= 22525.685\n|   |   |   |--- class: dynamic\n|   |   |--- size_mixed_kib >  22525.685\n|   |   |   |--- class: int8\n|   |--- accdrop_mixed >  0.008\n|   |   |--- acc_fp32 <= 0.754\n|   |   |   |--- class: dynamic\n|   |   |--- acc_fp32 >  0.754\n|   |   |   |--- class: dynamic\n"
+ }
+}

@@ -1,0 +1,26 @@
+Architecture-clustered bootstrap, 2,000 resamples, 95% percentile intervals (main campaign)
+
+cifar10  (n=3539 model-device pairs, 1185 architectures)
+  fastest feasible = fp32       8.6% [7.5, 9.6]
+  fastest feasible = fp16      32.1% [30.2, 33.9]
+  fastest feasible = mixed     13.0% [12.0, 14.0]
+  fastest feasible = dynamic   35.4% [33.6, 37.4]
+  fastest feasible = int8      10.9% [9.7, 12.1]
+  rules_exact              60.0% [58.2, 61.7]
+  selector_exact           68.2% [66.4, 69.9]
+
+imagenet100  (n=5047 model-device pairs, 1692 architectures)
+  fastest feasible = fp32      23.2% [21.9, 24.5]
+  fastest feasible = fp16      26.1% [24.8, 27.4]
+  fastest feasible = mixed      3.4% [2.8, 4.0]
+  fastest feasible = dynamic   41.6% [39.9, 43.3]
+  fastest feasible = int8       5.7% [5.0, 6.4]
+  rules_exact              50.9% [49.3, 52.5]
+  selector_exact           55.7% [54.2, 57.3]
+
+Flagship spot-check (n=150 frozen ImageNet-100 models; Wilson intervals for shares, model bootstrap for mean regret)
+  s25_int8_pure            91.33% [85.74, 94.87]  n=150
+  s25_int8_constrained     48.67% [40.80, 56.60]  n=150
+  s25_s26_agreement        74.67% [67.15, 80.95]  n=150
+  regret_S25_to_S26         0.22% [0.14, 0.33]  n=150
+  regret_S26_to_S25         0.34% [0.20, 0.53]  n=150

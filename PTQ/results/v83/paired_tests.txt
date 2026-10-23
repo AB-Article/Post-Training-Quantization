@@ -1,0 +1,57 @@
+Paired tests of each PTQ mode against FP32 on the same model and device
+==========================================================================
+latency = fastest successful backend; valid runs; no 0.1 ms floor;
+pairs restricted to model-device pairs with all five modes measured.
+r > 0 means the quantized graph is faster. p is two-sided Wilcoxon.
+
+--- cifar10  (2668 pairs with all five modes) ---
+device      mode             n   dMedian      r  faster%  p
+Redmi 13    FP16           893     -0.02   0.27     62.6  1.2e-12
+Redmi 13    Mixed          893     -0.57   0.65     76.3  2.6e-64
+Redmi 13    Dynamic        893     -0.83   0.81     87.0  8.9e-98
+Redmi 13    Static INT8    893     -0.48   0.60     74.2  6.5e-55
+Pixel 4     FP16           887     -0.16   0.55     72.9  3.5e-46
+Pixel 4     Mixed          887     -0.03   0.26     56.0  8.6e-12
+Pixel 4     Dynamic        887     -0.42   0.75     77.9  6.2e-84
+Pixel 4     Static INT8    887     -0.01   0.15     50.5  1.1e-04
+Tab S7+     FP16           888     -0.32   0.69     76.1  2.5e-71
+Tab S7+     Mixed          888     -0.19   0.49     59.6  3.3e-36
+Tab S7+     Dynamic        888     -0.40   0.73     74.5  2.2e-78
+Tab S7+     Static INT8    888     -0.21   0.48     60.0  7.4e-36
+  max p over the 12 tests: 1.05e-04   (manuscript claims p < 1e-3: HOLDS)
+  reproduces 24/24 published values
+
+--- imagenet100  (4909 pairs with all five modes) ---
+device      mode             n   dMedian      r  faster%  p
+Redmi 13    FP16          1643      0.00  -0.07     49.5  9.3e-03
+Redmi 13    Mixed         1643      0.33  -0.18     39.9  5.3e-10
+Redmi 13    Dynamic       1643     -0.01  -0.07     50.9  1.7e-02
+Redmi 13    Static INT8   1643      0.49  -0.16     39.4  2.4e-08
+Pixel 4     FP16          1633     -0.01   0.11     53.6  9.6e-05
+Pixel 4     Mixed         1633      0.07   0.11     40.3  2.3e-04
+Pixel 4     Dynamic       1633     -0.07   0.48     64.5  1.3e-62
+Pixel 4     Static INT8   1633      0.14   0.04     35.5  1.8e-01
+Tab S7+     FP16          1633     -0.01   0.10     53.0  3.7e-04
+Tab S7+     Mixed         1633      0.14   0.05     35.0  7.8e-02
+Tab S7+     Dynamic       1633     -0.03   0.39     60.3  2.0e-42
+Tab S7+     Static INT8   1633      0.28   0.02     32.9  5.7e-01
+  max p over the 12 tests: 5.65e-01   (manuscript claims p < 1e-3: DOES NOT HOLD)
+  reproduces 4/12 published values; differs on:
+      Redmi 13/fp16 r -0.07 vs -0.09
+      Redmi 13/mixed r -0.18 vs 0.27
+      Redmi 13/dynamic r -0.07 vs 0.47
+      Redmi 13/int8 r -0.16 vs 0.30
+      Pixel 4/mixed r 0.11 vs 0.07
+      Pixel 4/dynamic r 0.48 vs 0.41
+      Pixel 4/int8 r 0.04 vs 0.01
+      Tab S7+/dynamic r 0.39 vs 0.35
+
+Notes
+  CIFAR-10 reproduces supplementary Table S4 exactly, and the
+  p < 1e-3 claim of Section V-B holds on that corpus.
+  ImageNet-100: the r column of supplementary Table S11 does not
+  reproduce under this pool, nor under any of the sixteen pool
+  variants searched (best 7/12). Table S11 is attributed in the
+  supplement to the authors' own snapshot pipeline, which is not part
+  of this folder; the values printed above are what the released
+  records give. The main paper makes no claim from Table S11.

@@ -1,0 +1,50 @@
+{
+  "Tab S11|cpu|fp16": {
+    "med": 0.98,
+    "n": 40
+  },
+  "Tab S11|cpu|dynamic": {
+    "med": 0.39,
+    "n": 40
+  },
+  "Tab S11|cpu|int8": {
+    "med": 0.82,
+    "n": 38
+  },
+  "Tab S11|cpu|mixed": {
+    "med": 0.83,
+    "n": 38
+  },
+  "Tab S11|gpu|fp16": {
+    "med": 0.94,
+    "n": 39
+  },
+  "Tab S11|gpu|dynamic": {
+    "med": 0.96,
+    "n": 39
+  },
+  "Tab S11|gpu|int8": {
+    "med": 0.97,
+    "n": 38
+  },
+  "Tab S11|gpu|mixed": {
+    "med": 0.98,
+    "n": 38
+  },
+  "Tab S11|npu|fp16": {
+    "med": 0.66,
+    "n": 33
+  },
+  "Tab S11|npu|dynamic": {
+    "med": 1.36,
+    "n": 31
+  },
+  "Tab S11|npu|int8": {
+    "med": 0.09,
+    "n": 1
+  },
+  "Tab S11|npu|mixed": {
+    "med": 0.12,
+    "n": 1
+  }
+}

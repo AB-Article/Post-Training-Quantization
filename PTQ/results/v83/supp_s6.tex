@@ -1,0 +1,24 @@
+\begin{table}[!htbp]
+\centering
+\caption{Robustness of the device-dependence rate on the released constrained
+pool ($\tau=0.99$; $3{,}539$ labeled pairs, $1{,}185$ architectures). An architecture
+is device-dependent when its $\epsilon$-optimal mode sets are disjoint across
+the listed devices ($\epsilon=0$: exact winners differ). The last column
+restricts the pool to architectures whose converted FP32 TFLite graph reaches
+at least $50\%$ CIFAR-10 accuracy (number of architectures in parentheses).
+Brackets are 95\% bootstrap intervals clustered by architecture; $n$ is the
+number of architectures labeled on all listed devices.}
+\label{tab:robust_extra}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrlllll@{}}
+\toprule
+\textbf{Devices} & $n$ & \textbf{Exact} & $\epsilon=2\%$ & $\epsilon=5\%$ & $\epsilon=10\%$ & \textbf{FP32 acc.\ $\geq50\%$} \\
+\midrule
+All three devices & 1169 & 83.1 [80.9,\,85.2] & 62.0 [59.4,\,64.8] & 47.0 [44.2,\,49.8] & 36.0 [33.3,\,38.9] & 85.7 [82.6,\,88.5] (524) \\
+Redmi~13 vs Pixel~4 & 1169 & 73.4 [70.8,\,75.9] & 51.0 [48.1,\,53.9] & 33.9 [31.2,\,36.5] & 23.3 [20.9,\,25.6] & 73.7 [69.8,\,77.5] (524) \\
+Redmi~13 vs Tab~S7+ & 1169 & 73.6 [70.9,\,76.0] & 48.8 [46.0,\,51.8] & 37.0 [34.2,\,39.8] & 29.0 [26.3,\,31.5] & 73.7 [70.0,\,77.5] (524) \\
+Pixel~4 vs Tab~S7+ & 1185 & 38.1 [35.4,\,40.9] & 19.7 [17.6,\,22.0] & 13.5 [11.6,\,15.4] & 10.0 [8.3,\,11.6] & 49.3 [45.3,\,53.4] (537) \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,38 @@
+== cifar10
+  GBT      train Redmi 13  -> test Redmi 13  (same device ) exact  64.9  geo   3.2 [ 2.6, 3.9]  p90   8.5
+  majority train Redmi 13  -> test Redmi 13  (same device ) exact  56.5  geo   4.7 [ 4.1, 5.3]  p90  11.8
+  GBT      train Redmi 13  -> test Pixel 4   (cross family) exact  27.3  geo  28.9 [26.7,31.5]  p90 122.4
+  majority train Redmi 13  -> test Pixel 4   (cross family) exact  19.2  geo  32.1 [29.8,35.0]  p90 125.2
+  GBT      train Redmi 13  -> test Tab S7+   (cross family) exact  25.7  geo  47.0 [42.6,51.8]  p90 174.9
+  majority train Redmi 13  -> test Tab S7+   (cross family) exact  14.4  geo  64.4 [58.4,70.5]  p90 410.8
+  GBT      train Pixel 4   -> test Redmi 13  (cross family) exact  25.1  geo  17.6 [16.0,19.1]  p90  75.8
+  majority train Pixel 4   -> test Redmi 13  (cross family) exact  34.4  geo  11.6 [10.4,13.2]  p90  52.3
+  GBT      train Pixel 4   -> test Pixel 4   (same device ) exact  63.6  geo   5.7 [ 4.7, 6.8]  p90  13.8
+  majority train Pixel 4   -> test Pixel 4   (same device ) exact  48.9  geo  20.9 [18.5,23.8]  p90 108.5
+  GBT      train Pixel 4   -> test Tab S7+   (same family ) exact  62.0  geo  17.5 [14.8,20.1]  p90  75.6
+  majority train Pixel 4   -> test Tab S7+   (same family ) exact  42.0  geo  68.0 [60.6,75.8]  p90 525.2
+  GBT      train Tab S7+   -> test Redmi 13  (cross family) exact  26.3  geo  18.7 [16.9,20.3]  p90  82.2
+  majority train Tab S7+   -> test Redmi 13  (cross family) exact  19.8  geo  34.0 [31.7,36.5]  p90  92.7
+  GBT      train Tab S7+   -> test Pixel 4   (same family ) exact  59.7  geo   7.8 [ 6.7, 9.2]  p90  24.8
+  majority train Tab S7+   -> test Pixel 4   (same family ) exact  39.1  geo  19.4 [17.5,21.5]  p90  84.8
+  GBT      train Tab S7+   -> test Tab S7+   (same device ) exact  72.2  geo   9.3 [ 7.4,11.2]  p90  11.5
+  majority train Tab S7+   -> test Tab S7+   (same device ) exact  44.2  geo  36.7 [32.2,40.9]  p90 204.6
+== imagenet100
+  GBT      train Redmi 13  -> test Redmi 13  (same device ) exact  58.0  geo   2.3 [ 1.9, 2.7]  p90   3.9
+  majority train Redmi 13  -> test Redmi 13  (same device ) exact  54.3  geo   3.9 [ 3.4, 4.4]  p90  10.6
+  GBT      train Redmi 13  -> test Pixel 4   (cross family) exact  38.7  geo   5.0 [ 4.2, 5.9]  p90  11.4
+  majority train Redmi 13  -> test Pixel 4   (cross family) exact  43.9  geo   3.2 [ 2.7, 3.8]  p90   6.9
+  GBT      train Redmi 13  -> test Tab S7+   (cross family) exact  38.1  geo   9.5 [ 8.2,10.9]  p90  32.8
+  majority train Redmi 13  -> test Tab S7+   (cross family) exact  42.4  geo   5.6 [ 4.6, 6.5]  p90  22.0
+  GBT      train Pixel 4   -> test Redmi 13  (cross family) exact  37.2  geo   5.9 [ 5.2, 6.7]  p90  24.4
+  majority train Pixel 4   -> test Redmi 13  (cross family) exact  52.4  geo   4.0 [ 3.5, 4.5]  p90  11.3
+  GBT      train Pixel 4   -> test Pixel 4   (same device ) exact  47.9  geo   3.0 [ 2.5, 3.6]  p90   5.9
+  majority train Pixel 4   -> test Pixel 4   (same device ) exact  43.0  geo   2.7 [ 2.3, 3.1]  p90   6.4
+  GBT      train Pixel 4   -> test Tab S7+   (same family ) exact  46.5  geo   5.9 [ 4.8, 7.1]  p90  14.7
+  majority train Pixel 4   -> test Tab S7+   (same family ) exact  46.1  geo   3.6 [ 3.1, 4.1]  p90  10.1
+  GBT      train Tab S7+   -> test Redmi 13  (cross family) exact  37.5  geo   6.1 [ 5.4, 6.8]  p90  25.2
+  majority train Tab S7+   -> test Redmi 13  (cross family) exact  52.4  geo   4.0 [ 3.5, 4.5]  p90  11.3
+  GBT      train Tab S7+   -> test Pixel 4   (same family ) exact  46.4  geo   2.4 [ 2.0, 2.8]  p90   5.5
+  majority train Tab S7+   -> test Pixel 4   (same family ) exact  43.0  geo   2.7 [ 2.3, 3.1]  p90   6.4
+  GBT      train Tab S7+   -> test Tab S7+   (same device ) exact  59.0  geo   2.5 [ 1.8, 3.3]  p90   2.2
+  majority train Tab S7+   -> test Tab S7+   (same device ) exact  46.1  geo   3.6 [ 3.1, 4.1]  p90  10.1

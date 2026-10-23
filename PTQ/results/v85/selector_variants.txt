@@ -1,0 +1,18 @@
+== cifar10: 3539 pairs
+  direct GBT, per-device (masked)                exact  68.4 [66.5,70.0]  geo   5.9 [ 5.1, 6.8]  p90   9.3  ms 0.38  budget violations 0.0%
+  direct GBT, per-device (unmasked)              exact  67.5 [65.6,69.1]  geo   6.0 [ 5.2, 7.0]  p90   9.9  ms 0.39  budget violations 1.5%
+  direct GBT, per-family (masked)                exact  67.2 [65.3,69.0]  geo   6.8 [ 5.9, 7.8]  p90  10.9  ms 0.31  budget violations 0.0%
+  direct GBT, per-family + cores/RAM (masked)    exact  68.4 [66.5,70.0]  geo   5.9 [ 5.1, 6.8]  p90   9.3  ms 0.38  budget violations 0.0%
+  direct GBT, offline only (masked)              exact  53.2 [51.6,54.8]  geo  12.1 [11.0,13.4]  p90  59.7  ms 0.58  budget violations 0.0%
+  latency regressors, per-device (masked)        exact  55.0 [53.1,56.7]  geo   8.9 [ 7.9,10.0]  p90  21.4  ms 0.56  budget violations 0.0%
+  latency regressors, per-device (unmasked)      exact  44.6 [42.7,46.5]  geo  15.9 [14.2,17.8]  p90  59.8  ms 0.74  budget violations 18.6%
+  latency regressors, per-family (masked)        exact  55.2 [53.3,57.2]  geo   9.4 [ 8.3,10.5]  p90  22.9  ms 0.40  budget violations 0.0%
+== imagenet100: 5047 pairs
+  direct GBT, per-device (masked)                exact  55.6 [54.3,57.2]  geo   2.4 [ 2.0, 2.9]  p90   3.8  ms 0.42  budget violations 0.0%
+  direct GBT, per-device (unmasked)              exact  55.3 [54.0,56.9]  geo   2.5 [ 2.0, 2.9]  p90   3.8  ms 0.43  budget violations 0.5%
+  direct GBT, per-family (masked)                exact  54.1 [52.6,55.8]  geo   2.7 [ 2.1, 3.1]  p90   3.9  ms 0.43  budget violations 0.0%
+  direct GBT, per-family + cores/RAM (masked)    exact  55.6 [54.3,57.2]  geo   2.4 [ 2.0, 2.9]  p90   3.8  ms 0.42  budget violations 0.0%
+  direct GBT, offline only (masked)              exact  49.0 [47.5,50.7]  geo   4.1 [ 3.6, 4.7]  p90   7.4  ms 0.55  budget violations 0.0%
+  latency regressors, per-device (masked)        exact  41.4 [39.8,43.1]  geo   3.4 [ 2.9, 3.9]  p90   6.4  ms 0.67  budget violations 0.0%
+  latency regressors, per-device (unmasked)      exact  25.3 [23.9,26.7]  geo   5.7 [ 5.1, 6.5]  p90  13.8  ms 1.22  budget violations 33.6%
+  latency regressors, per-family (masked)        exact  41.6 [39.9,43.2]  geo   3.9 [ 3.3, 4.5]  p90   7.0  ms 0.73  budget violations 0.0%

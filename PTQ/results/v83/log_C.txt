@@ -1,0 +1,18 @@
+
+=== C. Fixed-backend device dependence ===
+  cifar10/constrained/fastest backend        n= 1169  exact  83.1 [81.0,85.3]  eps5  47.0 [44.1,50.0]
+  cifar10/constrained/CPU only               n= 1171  exact  48.8 [45.8,51.6]  eps5  28.9 [26.4,31.5]
+  cifar10/constrained/GPU only               n= 1159  exact  86.9 [84.9,88.8]  eps5  18.2 [16.0,20.5]
+  cifar10/unconstrained/fastest backend      n= 1320  exact  89.2 [87.5,90.8]  eps5  52.3 [49.6,55.0]
+  cifar10/unconstrained/CPU only             n= 1323  exact  53.0 [50.3,55.8]  eps5  31.6 [29.2,34.2]
+  cifar10/unconstrained/GPU only             n= 1307  exact  89.6 [88.0,91.1]  eps5  19.7 [17.7,21.9]
+  imagenet100/unconstrained/fastest backend  n= 1631  exact  90.7 [89.3,92.0]  eps5  28.0 [25.8,30.1]
+  imagenet100/unconstrained/CPU only         n= 1668  exact  21.0 [18.9,23.0]  eps5  16.3 [14.5,18.2]
+  imagenet100/unconstrained/GPU only         n= 1651  exact  86.9 [85.3,88.6]  eps5   9.5 [ 8.2,11.0]
+  fastest-backend share (CIFAR-10, %):
+ unit         CPU   GPU   NPU
+device                      
+24040RN64Y   0.8  42.0  57.2
+Pixel 4     30.2  61.7   8.1
+SM-T970     34.5  54.8  10.6
+written results/v83/v83_results_C.json

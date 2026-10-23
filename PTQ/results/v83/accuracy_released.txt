@@ -1,0 +1,12 @@
+CIFAR-10: FP32 graphs 1460
+  fp16     n= 1399 mean loss  0.09 pp  median  0.00  >1pp  0.2%  feasible@tau.99 99.7%
+  mixed    n= 1089 mean loss  1.29 pp  median  0.10  >1pp 10.1%  feasible@tau.99 75.3%
+  dynamic  n= 1398 mean loss  0.01 pp  median  0.00  >1pp  0.2%  feasible@tau.99 94.8%
+  int8     n= 1251 mean loss  1.59 pp  median  0.10  >1pp 11.6%  feasible@tau.99 73.5%
+ImageNet-100: FP32 graphs 1692
+  fp16     n= 1692 mean loss -0.00 pp  median  0.00  >1pp  0.1%  feasible@tau.99 99.3%
+  mixed    n= 1657 mean loss  1.56 pp  median  1.20  >1pp 56.5%  feasible@tau.99 34.4%
+  dynamic  n= 1689 mean loss  0.06 pp  median  0.00  >1pp  1.3%  feasible@tau.99 88.5%
+  int8     n= 1657 mean loss  1.57 pp  median  1.20  >1pp 56.5%  feasible@tau.99 34.4%
+ImageNet-100 checkpoint - FP32 graph: n=1693 mean -5.87 median -5.90 IQR [-7.66, -3.90]  |gap|<1pp 3.2%
+  Pearson r(checkpoint, graph) = 0.981

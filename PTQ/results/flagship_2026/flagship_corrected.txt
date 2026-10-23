@@ -1,0 +1,115 @@
+Corrected flagship spot-check (tau = 1.00% of matched FP32)
+====================================================================
+freeze models: 150  (accuracies available: 150)
+  latency buckets : {'gt_10ms': 38, '5_to_10ms': 39, '2_to_5ms': 37, 'lt_2ms': 36}
+  model families  : {'named': 9, 'rag': 76, 'unq': 65}
+  MediaTek subset : 40
+
+Feasibility under the accuracy budget
+  modes feasible per model: {2: 1, 3: 70, 4: 3, 5: 76}
+  fp32     feasible for 150/150 models
+  fp16     feasible for 150/150 models
+  dynamic  feasible for 148/150 models
+  int8     feasible for  79/150 models
+  mixed    feasible for  77/150 models
+
+Winner share (%)  [pure latency -> accuracy-constrained]
+  S25          n=150/150
+      fp32       4.0 ->  34.7
+      fp16       0.7 ->  14.0
+      dynamic    0.0 ->   0.0
+      int8      91.3 ->  48.7
+      mixed      4.0 ->   2.7
+  S26          n=150/150
+      fp32       4.0 ->  32.0
+      fp16       1.3 ->  16.7
+      dynamic    0.0 ->   0.0
+      int8      93.3 ->  51.3
+      mixed      1.3 ->   0.0
+  MTK_D9400    n= 40/ 40
+      fp32      12.5 ->  12.5
+      fp16      42.5 ->  45.0
+      dynamic   32.5 ->  35.0
+      int8       7.5 ->   5.0
+      mixed      5.0 ->   2.5
+  USB_Pixel4   n=150/150
+      fp32      25.3 ->  26.0
+      fp16      30.0 ->  31.3
+      dynamic   25.3 ->  35.3
+      int8       9.3 ->   2.0
+      mixed     10.0 ->   5.3
+  USB_TabS7    n=150/150
+      fp32      22.7 ->  24.7
+      fp16      38.7 ->  38.7
+      dynamic   32.0 ->  34.0
+      int8       4.7 ->   2.0
+      mixed      2.0 ->   0.7
+  USB_Redmi13  n=150/150
+      fp32      24.7 ->  26.0
+      fp16      17.3 ->  20.0
+      dynamic   18.7 ->  33.3
+      int8      32.7 ->  18.0
+      mixed      6.7 ->   2.7
+
+Winner-mode agreement
+  S25 vs S26
+      pure        n=150 agree= 94.7% chance= 85.5% kappa=0.633
+      constrained n=150 agree= 74.7% chance= 38.4% kappa=0.589
+  S25 vs Tab~S11 [cross-stack]
+      pure        n= 40 agree= 10.0% chance=  7.4% kappa=0.028
+      constrained n= 40 agree= 17.5% chance= 12.1% kappa=0.061
+  S25 vs Pixel~4 [cross-stack]
+      pure        n=150 agree= 11.3% chance= 10.1% kappa=0.013
+      constrained n=150 agree= 16.0% chance= 14.5% kappa=0.017
+  Pixel~4 vs Tab~S7+
+      pure        n=150 agree= 30.0% chance= 26.1% kappa=0.053
+      constrained n=150 agree= 38.7% chance= 30.6% kappa=0.116
+  triple S25+S26+MTK pure       : 3/40 = 7.5%
+  triple S25+S26+MTK constrained: 5/40 = 12.5%
+
+Tie-tolerant agreement on the constrained winner (%)
+  S25 vs S26                         tau=0.00:  80.0  tau=0.02: 100.0  tau=0.05: 100.0  tau=0.10: 100.0
+  S25 vs Tab~S11                     tau=0.00:  22.5  tau=0.02:  35.0  tau=0.05:  40.0  tau=0.10:  47.5
+  S25 vs Pixel~4                     tau=0.00:  20.7  tau=0.02:  40.7  tau=0.05:  55.3  tau=0.10:  68.7
+  Pixel~4 vs Tab~S7+                 tau=0.00:  38.7  tau=0.02:  77.3  tau=0.05:  93.3  tau=0.10:  97.3
+
+Regret of shipping device A's constrained winner on device B
+  S25|S26                  n=150 median=   0.00% mean=    0.22% p90=    0.72% median_abs=0.0000 ms
+  S26|S25                  n=150 median=   0.00% mean=    0.34% p90=    1.09% median_abs=0.0000 ms
+  S25|MTK_D9400            n= 40 median=  17.78% mean=   40.57% p90=  118.13% median_abs=0.4784 ms
+  MTK_D9400|S25            n= 38 median= 135.60% mean=  525.45% p90= 1660.92% median_abs=0.1595 ms
+  USB_Pixel4|S25           n=147 median= 122.35% mean=  485.00% p90= 1270.14% median_abs=0.1960 ms
+  USB_Pixel4|USB_TabS7     n=150 median=   0.48% mean=    5.12% p90=   23.50% median_abs=0.0309 ms
+
+Constrained-winner latency (ms)
+  S25          n=150 min=0.0530 q1=0.0890 med=0.2085 q3=0.4890 max=10.6500
+  S26          n=150 min=0.0540 q1=0.0910 med=0.1550 q3=0.4440 max=12.0560
+  MTK_D9400    n= 40 min=0.0396 q1=0.8981 med=1.7528 q3=3.9377 max=22.9969
+  USB_Pixel4   n=150 min=0.1482 q1=1.7164 med=3.8674 q3=8.4363 max=106.9140
+  USB_TabS7    n=149 min=1.2071 q1=1.7934 med=3.9835 q3=7.6526 max=83.6685
+  USB_Redmi13  n=137 min=0.2366 q1=4.9579 med=11.5541 q3=21.0097 max=109.4950
+
+Exact latency ties (selection resolved toward the least quantized mode)
+  S25          pure   2/150   constrained  13/150   {'fp32+fp16': 13}
+  S26          pure   1/150   constrained   5/150   {'fp32+fp16': 5}
+  MTK_D9400    pure   0/ 40   constrained   0/ 40   {}
+  USB_Pixel4   pure   0/150   constrained   0/150   {}
+  USB_TabS7    pure   0/150   constrained   0/150   {}
+  USB_Redmi13  pure  12/150   constrained  12/150   {'fp32+fp16': 11, 'int8+mixed': 1}
+
+MediaTek Dimensity 9400 run accounting
+  rows=774 models=40 status={'ok': 490, 'failed': 210, 'push_failed': 74}
+  models with all five modes measurable: 38/40
+  valid measurements per mode x backend (of 40 models):
+      fp32     cpu=40 gpu=39 npu=34 any=40
+      fp16     cpu=40 gpu=39 npu=34 any=40
+      dynamic  cpu=40 gpu=39 npu=31 any=40
+      int8     cpu=38 gpu=38 npu= 1 any=38
+      mixed    cpu=38 gpu=38 npu= 1 any=38
+  benchmark_model version string recorded: False
+
+Same-device measurement-stack control (USB harness vs AI Hub)
+  Galaxy Tab S7+   n=18 winner match= 22.2% ms ratio(med)=0.95 mode-rank rho(med)=0.50
+  Pixel 4          n=18 winner match= 16.7% ms ratio(med)=1.04 mode-rank rho(med)=0.45
+  pooled           n=36 winner match= 19.4% ms ratio(med)=0.96 mode-rank rho(med)=0.50
+  pooled log-latency Pearson r = 0.775 over 163 mode pairs

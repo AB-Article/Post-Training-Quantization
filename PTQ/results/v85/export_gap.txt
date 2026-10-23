@@ -1,0 +1,8 @@
+CIFAR-10 FP32 graphs 1463; with public training records and a resolvable transform 1348 (115 without)
+
+group                        n   mean   med.   >20pp
+----------------------------------------------------
+Matched preprocessing      430    2.1    0.8    1.4%
++ crop or pad              783   21.7   18.7   47.6%
+No normalization           135   40.8   39.0   91.1%
+pooled                    1348   17.4    6.6   37.2%

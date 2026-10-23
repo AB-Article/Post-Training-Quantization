@@ -1,0 +1,31 @@
+660 labeled model-device pairs over 223 architectures, tau=0.01, floor=0.1 ms
+
+global single choice (dynamic)       exact  55.3   regret med   0.0%  geo-mean   4.5%  p90    9.2%   infeasible  3.5%
+global single choice (fp16)          exact  18.9   regret med  10.8%  geo-mean  27.2%  p90  100.0%   infeasible  6.5%
+per-device majority modes: {'24040RN64Y': 'mixed', 'Pixel 4': 'dynamic', 'SM-T970': 'dynamic'}
+per-device majority (device only)    exact  56.8   regret med   0.0%  geo-mean   5.2%  p90   10.2%   infeasible  6.7%
+per-architecture oracle majority     exact  66.5   regret med   0.0%  geo-mean   4.5%  p90   10.2%   infeasible  0.8%
+learned: offline features only       exact  54.7   regret med   0.0%  geo-mean   6.3%  p90   13.1%   infeasible  2.6%
+                                     exact per seed: [54.7, 54.7, 54.7, 54.7, 54.7, 54.7, 54.7, 54.7, 54.7, 54.7]
+learned: + device descriptor (GBT)   exact  70.5   regret med   0.0%  geo-mean   2.5%  p90    5.5%   infeasible  3.3%
+                                     exact per seed: [70.5, 70.5, 70.5, 70.5, 70.5, 70.5, 70.5, 70.5, 70.5, 70.5]
+learned: + device descriptor (RF)    exact  69.8   regret med   0.0%  geo-mean   2.3%  p90    5.7%   infeasible  4.3%
+                                     exact per seed: [69.8, 70.2, 69.5, 70.0, 70.0, 69.8, 69.5, 69.7, 70.0, 69.1]
+learned: + device descriptor (LogReg) exact  58.6   regret med   0.0%  geo-mean   5.2%  p90   10.2%   infeasible  4.7%
+                                     exact per seed: [58.6, 58.6, 58.6, 58.6, 58.6, 58.6, 58.6, 58.6, 58.6, 58.6]
+
+device-descriptor gain per seed (pp): [15.8 15.8 15.8 15.8 15.8 15.8 15.8 15.8 15.8 15.8]
+
+per device:  {'24040RN64Y': np.float64(66.8), 'Pixel 4': np.float64(70.0), 'SM-T970': np.float64(74.4)}
+per family:  {'moe': (3, np.float64(100.0)), 'named': (36, np.float64(41.7)), 'rag': (30, np.float64(46.7)), 'unq': (591, np.float64(73.3))}
+
+confusion (rows=true, cols=predicted):
+pred     fp32  fp16  mixed  dynamic  int8
+label                                    
+fp32       16    15      3       21     1
+fp16        6    71      6       41     1
+mixed       1     7     62       15     3
+dynamic    11    23     12      314     5
+int8        1     7      4       12     2
+
+top features: [('dev_soc', np.float64(0.132)), ('device', np.float64(0.081)), ('size_int8_kib', np.float64(0.038)), ('acc_mixed', np.float64(0.038)), ('acc_dynamic', np.float64(0.038)), ('acc_int8', np.float64(0.038)), ('size_fp32_kib', np.float64(0.037)), ('accdrop_int8', np.float64(0.037))]

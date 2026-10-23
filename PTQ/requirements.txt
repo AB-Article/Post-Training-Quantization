@@ -1,0 +1,27 @@
+# Python 3.9 or newer.
+#   python3 -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# scikit-learn is required by eleven scripts (predictor.py, v83_analysis.py,
+# guideline.py, named_models.py, cross_task.py, family_transfer.py,
+# selector_variants.py, overhead_model.py, predictor_ci.py, rules_eval.py and
+# calibrate_new_devices.py); it was missing from earlier versions of this file.
+#
+# No upper bounds are needed: the one version-sensitive component, the
+# architecture-grouped CV split, is computed by analysis/grouped_cv.py from a
+# frozen fold map rather than by sklearn.model_selection.GroupKFold, whose
+# group-to-fold assignment changed in scikit-learn 1.6.  All estimators are
+# seeded (random_state=0) and no code path depends on PYTHONHASHSEED, so the
+# committed outputs under analysis/results/ reproduce bit-for-bit on any
+# combination at or above these floors, with two documented exceptions:
+# family_transfer.py and selector_variants.py fit HistGradientBoosting models on
+# small per-device subsets, and scikit-learn's gradient-boosting internals have
+# changed between releases, so their entries (and Tables S28 and S29, which
+# embed them) can move by up to ~1.2 points.  No conclusion depends on that
+# margin.  Run `python verify_results.py` to see exactly which outputs match
+# byte for byte on your installation and which fall under that tolerance.
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.1
+matplotlib>=3.7

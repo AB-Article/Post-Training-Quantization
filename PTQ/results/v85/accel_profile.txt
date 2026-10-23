@@ -1,0 +1,65 @@
+== A1 median(mode/FP32) per backend, paired by (corpus,model); [Q1,Q3]; n
+Redmi 13  CPU fp16      1.00 [0.96,1.04] n=2805
+Redmi 13  CPU mixed     0.85 [0.43,1.05] n=2532
+Redmi 13  CPU dynamic   0.80 [0.62,0.89] n=2775
+Redmi 13  CPU int8      0.83 [0.41,1.04] n=2686
+Redmi 13  GPU fp16      1.00 [0.98,1.02] n=2770
+Redmi 13  GPU mixed     1.01 [0.98,1.03] n=2594
+Redmi 13  GPU dynamic   0.99 [0.95,1.01] n=2751
+Redmi 13  GPU int8      1.01 [0.97,1.04] n=2748
+Redmi 13  NPU fp16      1.00 [0.97,1.00] n=2431
+Redmi 13  NPU mixed     0.48 [0.44,0.54] n=2230
+Redmi 13  NPU dynamic   0.54 [0.48,0.74] n=2402
+Redmi 13  NPU int8      0.48 [0.45,0.55] n=2386
+Pixel 4   CPU fp16      1.02 [0.91,1.21] n=2839
+Pixel 4   CPU mixed     0.69 [0.56,1.01] n=2572
+Pixel 4   CPU dynamic   0.40 [0.20,0.71] n=2813
+Pixel 4   CPU int8      0.69 [0.56,1.00] n=2655
+Pixel 4   GPU fp16      1.00 [0.98,1.01] n=2762
+Pixel 4   GPU mixed     1.01 [0.97,1.03] n=2587
+Pixel 4   GPU dynamic   0.99 [0.96,1.01] n=2743
+Pixel 4   GPU int8      1.01 [0.98,1.05] n=2670
+Pixel 4   NPU fp16      1.23 [0.33,2.98] n=2187
+Pixel 4   NPU mixed     0.56 [0.37,1.24] n=6
+Pixel 4   NPU dynamic   1.00 [0.92,1.02] n=2206
+Pixel 4   NPU int8      0.44 [0.35,1.40] n=6
+Tab S7+   CPU fp16      1.00 [0.95,1.05] n=2841
+Tab S7+   CPU mixed     0.36 [0.22,0.55] n=2593
+Tab S7+   CPU dynamic   0.18 [0.15,0.44] n=2814
+Tab S7+   CPU int8      0.34 [0.21,0.52] n=2747
+Tab S7+   GPU fp16      1.00 [0.99,1.01] n=2762
+Tab S7+   GPU mixed     1.01 [0.98,1.04] n=2587
+Tab S7+   GPU dynamic   1.00 [0.98,1.01] n=2743
+Tab S7+   GPU int8      1.02 [0.99,1.08] n=2741
+Tab S7+   NPU fp16      0.89 [0.21,2.49] n=2161
+Tab S7+   NPU mixed     0.56 [0.43,1.65] n=6
+Tab S7+   NPU dynamic   1.00 [0.95,1.03] n=2205
+Tab S7+   NPU int8      0.58 [0.41,0.80] n=6
+
+== A3 availability: share of valid runs with a measured backend latency (>0.1 ms)
+Redmi 13  fp32     n= 2896 cpu= 98.6% gpu= 97.4% npu= 85.7%
+Redmi 13  fp16     n= 2978 cpu= 98.6% gpu= 97.5% npu= 86.0%
+Redmi 13  mixed    n= 2786 cpu= 95.9% gpu= 98.2% npu= 98.3%
+Redmi 13  dynamic  n= 2950 cpu= 98.4% gpu= 97.9% npu= 98.4%
+Redmi 13  int8     n= 2944 cpu= 96.0% gpu= 98.2% npu= 98.4%
+Pixel 4   fp32     n= 2895 cpu= 99.9% gpu= 97.2% npu= 80.6%
+Pixel 4   fp16     n= 2978 cpu= 99.8% gpu= 97.2% npu= 77.3%
+Pixel 4   mixed    n= 2769 cpu= 97.9% gpu= 98.6% npu=  0.2%
+Pixel 4   dynamic  n= 2950 cpu= 99.9% gpu= 97.7% npu= 77.6%
+Pixel 4   int8     n= 2855 cpu= 97.8% gpu= 98.6% npu=  0.2%
+Tab S7+   fp32     n= 2895 cpu= 99.9% gpu= 97.2% npu= 80.5%
+Tab S7+   fp16     n= 2978 cpu= 99.9% gpu= 97.2% npu= 76.4%
+Tab S7+   mixed    n= 2769 cpu= 98.7% gpu= 98.6% npu=  0.2%
+Tab S7+   dynamic  n= 2950 cpu= 99.9% gpu= 97.7% npu= 77.6%
+Tab S7+   int8     n= 2926 cpu= 98.6% gpu= 98.6% npu=  0.2%
+
+== FP32 backend ratios by model latency class (class = min over backends of FP32 latency on this device, ms)
+Redmi 13  <2    n=  366 gpu/cpu=0.92(n=348)  npu/cpu=0.23(n=364)  npu/gpu=0.27(n=346)
+Redmi 13  2-10  n=  712 gpu/cpu=0.42(n=689)  npu/cpu=0.52(n=712)  npu/gpu=1.20(n=689)
+Redmi 13  >=10  n= 1815 gpu/cpu=0.32(n=1747)  npu/cpu=1.10(n=1404)  npu/gpu=3.62(n=1375)
+Pixel 4   <2    n=  769 gpu/cpu=0.55(n=753)  npu/cpu=1.91(n=738)  npu/gpu=3.59(n=728)
+Pixel 4   2-10  n=  725 gpu/cpu=0.23(n=698)  npu/cpu=0.65(n=608)  npu/gpu=2.69(n=586)
+Pixel 4   >=10  n= 1400 gpu/cpu=0.14(n=1360)  npu/cpu=0.14(n=984)  npu/gpu=1.26(n=964)
+Tab S7+   <2    n=  668 gpu/cpu=0.33(n=660)  npu/cpu=1.22(n=650)  npu/gpu=3.22(n=647)
+Tab S7+   2-10  n=  817 gpu/cpu=0.11(n=795)  npu/cpu=0.33(n=717)  npu/gpu=2.69(n=697)
+Tab S7+   >=10  n= 1409 gpu/cpu=0.12(n=1356)  npu/cpu=0.18(n=962)  npu/gpu=1.68(n=933)

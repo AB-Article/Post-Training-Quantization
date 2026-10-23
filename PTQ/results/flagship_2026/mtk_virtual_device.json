@@ -1,0 +1,18 @@
+{
+  "all backends (real)": {
+    "dec_int": 35.0,
+    "n": 40
+  },
+  "no GPU": {
+    "dec_int": 67.5,
+    "n": 40
+  },
+  "no NPU": {
+    "dec_int": 60.0,
+    "n": 40
+  },
+  "CPU only": {
+    "dec_int": 97.5,
+    "n": 40
+  }
+}

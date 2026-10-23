@@ -1,0 +1,8 @@
+CIFAR-10: mixed == static INT8 accuracy for 1217/1250 models (97.4%)
+ImageNet-100: mixed == static INT8 accuracy for 1164/1659 models (70.2%)
+CIFAR-10 valid runs: max input side 800 px, median 64, 32x32 share 24.0%
+cifar10: Spearman(size_fp32, best latency) = 0.81; label share {'dynamic': 35.4, 'fp16': 32.1, 'mixed': 13.0, 'int8': 10.9, 'fp32': 8.6}
+   family share of pairs: {'unq': 52.0, 'rag': 46.0, 'named': 1.9, 'moe': 0.1}
+imagenet100: Spearman(size_fp32, best latency) = 0.80; label share {'dynamic': 41.6, 'fp16': 26.1, 'fp32': 23.2, 'int8': 5.7, 'mixed': 3.4}
+   family share of pairs: {'unq': 65.9, 'rag': 32.9, 'named': 1.1, 'moe': 0.1}
+CIFAR-10 masked GBT exact match by family: {'moe': (3, 100.0), 'named': (68, 42.6), 'rag': (1628, 70.7), 'unq': (1840, 66.9)}

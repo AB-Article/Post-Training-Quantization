@@ -1,0 +1,24 @@
+
+=== B. Unseen-device transfer (leave one device out) ===
+  Redmi 13  few-shot k=25                      exact  38.3  geo    9.7  p90   47.5  ms  0.50
+  Redmi 13  few-shot k=50                      exact  44.0  geo    7.5  p90   30.6  ms  0.47
+  Redmi 13  few-shot k=100                     exact  50.5  geo    6.1  p90   20.2  ms  0.42
+  Redmi 13  few-shot k=200                     exact  55.3  geo    5.0  p90   13.1  ms  0.39
+  Redmi 13  global order from other devices    exact  19.8  geo   34.2  p90   92.9  ms  2.34
+  Redmi 13  offline GBT, other devices         exact  26.9  geo   16.7  p90   78.4  ms  0.61
+  Redmi 13  +descriptor GBT, other devices     exact  27.5  geo   15.0  p90   72.7  ms  0.55
+  Pixel 4   few-shot k=25                      exact  57.3  geo    9.4  p90   37.7  ms  0.29
+  Pixel 4   few-shot k=50                      exact  62.3  geo    7.4  p90   19.7  ms  0.20
+  Pixel 4   few-shot k=100                     exact  63.8  geo    6.4  p90   15.9  ms  0.18
+  Pixel 4   few-shot k=200                     exact  65.6  geo    5.9  p90   14.1  ms  0.19
+  Pixel 4   global order from other devices    exact  48.8  geo   20.9  p90  108.5  ms  0.37
+  Pixel 4   offline GBT, other devices         exact  47.3  geo   15.5  p90   73.3  ms  0.45
+  Pixel 4   +descriptor GBT, other devices     exact  28.2  geo   27.1  p90  115.0  ms  0.84
+  Tab S7+   few-shot k=25                      exact  62.7  geo   12.5  p90   50.8  ms  0.39
+  Tab S7+   few-shot k=50                      exact  61.2  geo   13.9  p90   60.2  ms  0.42
+  Tab S7+   few-shot k=100                     exact  66.9  geo   11.4  p90   33.3  ms  0.35
+  Tab S7+   few-shot k=200                     exact  68.6  geo   10.0  p90   31.0  ms  0.34
+  Tab S7+   global order from other devices    exact  42.0  geo   67.8  p90  525.2  ms  0.74
+  Tab S7+   offline GBT, other devices         exact  45.1  geo   25.8  p90  129.7  ms  0.70
+  Tab S7+   +descriptor GBT, other devices     exact  26.8  geo   45.0  p90  165.6  ms  1.30
+written results/v83/v83_results_B.json

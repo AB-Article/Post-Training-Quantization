@@ -1,0 +1,10 @@
+shared (model, device) pairs: 3471; shared architectures: 1167
+exact agreement of the constrained winner: 30.7%  (same feasible set: 27.6% of pairs; agreement within them 36.7%)
+   Redmi 13  agreement 21.9% (n=1137)
+   Pixel 4   agreement 34.4% (n=1167)
+   Tab S7+   agreement 35.7% (n=1167)
+reuse CIFAR-10 choice on ImageNet-100 (fallback FP32 if infeasible): exact 35.5  geo regret 5.5  p90 17.8  ms 0.81
+   baseline always dynamic                   exact 36.0  geo 5.3  p90 18.0
+   baseline per-device majority (ImageNet)   exact 41.6  geo 6.1  p90 21.8
+depth-3 tree trained on CIFAR-10, applied to all ImageNet-100 pairs: exact 48.0  geo 2.6  p90 4.8
+   reference: depth-3 tree trained on ImageNet-100 itself (in-sample): exact 51.8  geo 3.0  p90 5.4

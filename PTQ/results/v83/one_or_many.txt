@@ -1,0 +1,108 @@
+== cifar10  (1185 architectures; single artifact costs >10% on some device for 34.0% of archs, >25% for 25.6%)
+  single artifact (oracle)
+    all        n= 3539 geo    5.8%  ms  0.17  >10%  12.6%  >25%   9.2%
+    <2 ms      n= 1607 geo    9.9%  ms  0.09  >10%  20.2%  >25%  17.4%
+    model <2 ms n= 1286 geo   11.1%  ms  0.09  >10%  22.2%  >25%  20.0%
+    2-10 ms    n= 1090 geo    3.5%  ms  0.16  >10%   9.1%  >25%   4.0%
+    model 2-10 ms n=  936 geo    5.5%  ms  0.20  >10%  13.5%  >25%   7.2%
+    >=10 ms    n=  842 geo    1.3%  ms  0.33  >10%   2.7%  >25%   0.0%
+    model >=10 ms n= 1317 geo    1.1%  ms  0.24  >10%   2.6%  >25%   0.0%
+    model <10 ms n= 2222 geo    8.7%  ms  0.14  >10%  18.5%  >25%  14.6%
+    models per model-level band: {'<2 ms': 429, '2-10 ms': 312, '>=10 ms': 444}
+    Redmi 13   n= 1169 geo    9.6%  ms  0.34  >10%  19.8%  >25%  15.1%
+    Pixel 4    n= 1185 geo    3.9%  ms  0.07  >10%   7.9%  >25%   5.1%
+    Tab S7+    n= 1185 geo    4.1%  ms  0.11  >10%  10.1%  >25%   7.3%
+  always dynamic INT8
+    all        n= 3539 geo   36.8%  ms  0.67  >10%  36.2%  >25%  28.3%
+    <2 ms      n= 1607 geo   88.3%  ms  0.64  >10%  65.7%  >25%  56.9%
+    model <2 ms n= 1286 geo  105.3%  ms  0.53  >10%  72.9%  >25%  63.8%
+    2-10 ms    n= 1090 geo    6.7%  ms  0.59  >10%  16.6%  >25%   6.9%
+    model 2-10 ms n=  936 geo   17.6%  ms  0.94  >10%  29.8%  >25%  17.2%
+    >=10 ms    n=  842 geo    2.4%  ms  0.84  >10%   5.2%  >25%   1.4%
+    model >=10 ms n= 1317 geo    2.4%  ms  0.63  >10%   4.9%  >25%   1.5%
+    model <10 ms n= 2222 geo   62.4%  ms  0.70  >10%  54.7%  >25%  44.1%
+    models per model-level band: {'<2 ms': 429, '2-10 ms': 312, '>=10 ms': 444}
+    Redmi 13   n= 1169 geo   11.7%  ms  0.78  >10%  29.9%  >25%  16.3%
+    Pixel 4    n= 1185 geo   26.3%  ms  0.41  >10%  33.3%  >25%  26.8%
+    Tab S7+    n= 1185 geo   80.9%  ms  0.84  >10%  45.1%  >25%  41.7%
+  tuned on Tab S7+
+    all        n= 3539 geo    7.8%  ms  0.28  >10%  15.3%  >25%  11.1%
+    <2 ms      n= 1607 geo   11.9%  ms  0.13  >10%  19.7%  >25%  18.0%
+    model <2 ms n= 1286 geo   13.6%  ms  0.14  >10%  22.4%  >25%  20.7%
+    2-10 ms    n= 1090 geo    6.5%  ms  0.31  >10%  17.1%  >25%   9.1%
+    model 2-10 ms n=  936 geo    8.5%  ms  0.34  >10%  18.9%  >25%  12.1%
+    >=10 ms    n=  842 geo    1.9%  ms  0.52  >10%   4.9%  >25%   0.6%
+    model >=10 ms n= 1317 geo    1.9%  ms  0.38  >10%   5.9%  >25%   1.1%
+    model <10 ms n= 2222 geo   11.4%  ms  0.22  >10%  20.9%  >25%  17.1%
+    models per model-level band: {'<2 ms': 429, '2-10 ms': 312, '>=10 ms': 444}
+    Redmi 13   n= 1169 geo   16.9%  ms  0.66  >10%  32.1%  >25%  25.2%
+    Pixel 4    n= 1185 geo    7.2%  ms  0.18  >10%  14.2%  >25%   8.3%
+    Tab S7+    n= 1185 geo    0.0%  ms  0.00  >10%   0.0%  >25%   0.0%
+  tuned on Pixel 4
+    all        n= 3539 geo    9.7%  ms  0.31  >10%  17.4%  >25%  12.5%
+    <2 ms      n= 1607 geo   16.0%  ms  0.15  >10%  22.7%  >25%  20.4%
+    model <2 ms n= 1286 geo   18.5%  ms  0.16  >10%  25.3%  >25%  23.3%
+    2-10 ms    n= 1090 geo    6.6%  ms  0.34  >10%  18.0%  >25%   9.4%
+    model 2-10 ms n=  936 geo    8.3%  ms  0.32  >10%  20.4%  >25%  11.9%
+    >=10 ms    n=  842 geo    2.3%  ms  0.58  >10%   6.8%  >25%   1.4%
+    model >=10 ms n= 1317 geo    2.6%  ms  0.46  >10%   7.7%  >25%   2.4%
+    model <10 ms n= 2222 geo   14.1%  ms  0.23  >10%  23.2%  >25%  18.5%
+    models per model-level band: {'<2 ms': 429, '2-10 ms': 312, '>=10 ms': 444}
+    Redmi 13   n= 1169 geo   15.6%  ms  0.55  >10%  32.4%  >25%  23.5%
+    Pixel 4    n= 1185 geo    0.0%  ms  0.00  >10%   0.0%  >25%   0.0%
+    Tab S7+    n= 1185 geo   14.3%  ms  0.39  >10%  20.1%  >25%  14.1%
+== imagenet100  (1692 architectures; single artifact costs >10% on some device for 12.8% of archs, >25% for 6.0%)
+  single artifact (oracle)
+    all        n= 5047 geo    1.6%  ms  0.19  >10%   5.0%  >25%   2.0%
+    <2 ms      n=  469 geo    7.2%  ms  0.11  >10%  27.5%  >25%  13.2%
+    model <2 ms n=   12 geo   11.3%  ms  0.07  >10%  25.0%  >25%  16.7%
+    2-10 ms    n= 1403 geo    2.0%  ms  0.10  >10%   5.3%  >25%   1.9%
+    model 2-10 ms n= 1224 geo    4.7%  ms  0.14  >10%  16.1%  >25%   7.0%
+    >=10 ms    n= 3175 geo    0.6%  ms  0.24  >10%   1.5%  >25%   0.4%
+    model >=10 ms n= 3811 geo    0.6%  ms  0.21  >10%   1.4%  >25%   0.4%
+    model <10 ms n= 1236 geo    4.7%  ms  0.14  >10%  16.2%  >25%   7.1%
+    models per model-level band: {'<2 ms': 4, '2-10 ms': 408, '>=10 ms': 1280}
+    Redmi 13   n= 1663 geo    1.8%  ms  0.30  >10%   4.8%  >25%   1.8%
+    Pixel 4    n= 1692 geo    1.2%  ms  0.17  >10%   3.3%  >25%   0.7%
+    Tab S7+    n= 1692 geo    1.8%  ms  0.10  >10%   7.0%  >25%   3.6%
+  always dynamic INT8
+    all        n= 5047 geo    4.2%  ms  0.54  >10%  10.2%  >25%   5.4%
+    <2 ms      n=  469 geo   13.5%  ms  0.25  >10%  37.1%  >25%  15.1%
+    model <2 ms n=   12 geo   78.7%  ms  0.42  >10%  66.7%  >25%  41.7%
+    2-10 ms    n= 1403 geo    7.3%  ms  0.41  >10%  16.4%  >25%  11.5%
+    model 2-10 ms n= 1224 geo   11.3%  ms  0.40  >10%  29.9%  >25%  17.2%
+    >=10 ms    n= 3175 geo    1.6%  ms  0.63  >10%   3.5%  >25%   1.3%
+    model >=10 ms n= 3811 geo    1.9%  ms  0.58  >10%   3.7%  >25%   1.5%
+    model <10 ms n= 1236 geo   11.9%  ms  0.40  >10%  30.3%  >25%  17.5%
+    models per model-level band: {'<2 ms': 4, '2-10 ms': 408, '>=10 ms': 1280}
+    Redmi 13   n= 1663 geo    3.9%  ms  0.54  >10%  10.5%  >25%   7.3%
+    Pixel 4    n= 1692 geo    3.2%  ms  0.54  >10%   6.8%  >25%   3.0%
+    Tab S7+    n= 1692 geo    5.6%  ms  0.53  >10%  13.3%  >25%   6.0%
+  tuned on Tab S7+
+    all        n= 5047 geo    2.4%  ms  0.33  >10%   6.0%  >25%   3.3%
+    <2 ms      n=  469 geo    1.7%  ms  0.02  >10%   3.6%  >25%   0.6%
+    model <2 ms n=   12 geo   11.3%  ms  0.07  >10%  25.0%  >25%  16.7%
+    2-10 ms    n= 1403 geo    6.3%  ms  0.31  >10%  15.2%  >25%  10.4%
+    model 2-10 ms n= 1224 geo    7.4%  ms  0.34  >10%  17.7%  >25%  11.9%
+    >=10 ms    n= 3175 geo    0.9%  ms  0.38  >10%   2.3%  >25%   0.6%
+    model >=10 ms n= 3811 geo    0.8%  ms  0.32  >10%   2.2%  >25%   0.6%
+    model <10 ms n= 1236 geo    7.5%  ms  0.34  >10%  17.8%  >25%  12.0%
+    models per model-level band: {'<2 ms': 4, '2-10 ms': 408, '>=10 ms': 1280}
+    Redmi 13   n= 1663 geo    5.7%  ms  0.60  >10%  14.0%  >25%   9.2%
+    Pixel 4    n= 1692 geo    1.7%  ms  0.38  >10%   4.3%  >25%   0.9%
+    Tab S7+    n= 1692 geo    0.0%  ms  0.00  >10%   0.0%  >25%   0.0%
+  tuned on Pixel 4
+    all        n= 5047 geo    2.9%  ms  0.42  >10%   7.4%  >25%   4.6%
+    <2 ms      n=  469 geo    5.3%  ms  0.08  >10%  19.0%  >25%   7.5%
+    model <2 ms n=   12 geo   25.6%  ms  0.18  >10%  25.0%  >25%  25.0%
+    2-10 ms    n= 1403 geo    5.9%  ms  0.32  >10%  14.1%  >25%  10.4%
+    model 2-10 ms n= 1224 geo    7.6%  ms  0.31  >10%  21.6%  >25%  13.2%
+    >=10 ms    n= 3175 geo    1.2%  ms  0.52  >10%   2.8%  >25%   1.6%
+    model >=10 ms n= 3811 geo    1.3%  ms  0.46  >10%   2.8%  >25%   1.8%
+    model <10 ms n= 1236 geo    7.8%  ms  0.31  >10%  21.6%  >25%  13.3%
+    models per model-level band: {'<2 ms': 4, '2-10 ms': 408, '>=10 ms': 1280}
+    Redmi 13   n= 1663 geo    5.3%  ms  0.77  >10%  12.6%  >25%   8.8%
+    Pixel 4    n= 1692 geo    0.0%  ms  0.00  >10%   0.0%  >25%   0.0%
+    Tab S7+    n= 1692 geo    3.4%  ms  0.50  >10%   9.8%  >25%   5.0%
+
+Benchmarking budget per new model on a known device class: exhaustive = 5 runs (one per mode); selector / rules = 0; new device class: ~100 models x up to 5 modes once.

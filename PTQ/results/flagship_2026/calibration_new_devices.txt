@@ -1,0 +1,33 @@
+Few-shot calibration of the selector on the 2025-2026 devices
+==================================================================
+train: all ImageNet-100 rows of the three main-campaign
+devices + k freeze models of the target; test: the rest.
+5 seeds, feasibility-masked HGB, offline features.
+
+--- Galaxy S25  (150 freeze models) ---
+    k   exact %  regret %  n test
+    0      17.3     339.3     150
+   25      17.6     348.5     125
+   50      17.8     353.1     100
+  100      20.8     359.4      50
+   baseline always int8 (target majority)      exact  48.7  regret    10.2
+   baseline always dynamic INT8                exact   0.0  regret  1338.7
+
+--- Galaxy S26  (150 freeze models) ---
+    k   exact %  regret %  n test
+    0      18.0     256.3     150
+   25      17.3     266.2     125
+   50      19.6     269.7     100
+  100      23.2     269.4      50
+   baseline always int8 (target majority)      exact  51.3  regret    10.9
+   baseline always dynamic INT8                exact   0.0  regret  1266.3
+
+--- Tab S11  (40 freeze models) ---
+    k   exact %  regret %  n test
+    0      57.5      16.1      40
+   10      56.0      12.7      30
+   20      53.0      18.4      20
+   30      50.0      20.4      10
+   baseline always fp16 (target majority)      exact  45.0  regret    22.3
+   baseline always dynamic INT8                exact  35.0  regret    23.5
+

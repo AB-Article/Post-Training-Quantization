@@ -1,0 +1,2 @@
+cifar10: rules exact 60.0  geo 9.4  p90 21.2  ms 0.35
+imagenet100: rules exact 50.9  geo 2.6  p90 5.2  ms 0.54

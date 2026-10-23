@@ -1,0 +1,3 @@
+int8       18    13     33       38   185
+
+top features: [('dev_soc', np.float64(0.119)), ('device', np.float64(0.117)), ('accdrop_dynamic', np.float64(0.087)), ('accdrop_mixed', np.float64(0.081)), ('accdrop_int8', np.float64(0.071)), ('acc_dynamic', np.float64(0.043)), ('acc_int8', np.float64(0.043)), ('size_fp16_kib', np.float64(0.043))]

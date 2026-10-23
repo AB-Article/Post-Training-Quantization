@@ -1,0 +1,12 @@
+
+=== C. Fixed-backend device dependence ===
+  imagenet100/constrained/fastest backend    n= 1663  exact  76.4 [74.4,78.5]  eps5  18.3 [16.4,20.1]
+  imagenet100/constrained/CPU only           n= 1666  exact  23.5 [21.4,25.6]  eps5  17.3 [15.5,19.1]
+  imagenet100/constrained/GPU only           n= 1651  exact  76.9 [74.8,78.9]  eps5   7.3 [ 6.1, 8.7]
+  fastest-backend share (CIFAR-10, %):
+ unit         CPU   GPU   NPU
+device                      
+24040RN64Y   0.8  42.0  57.2
+Pixel 4     30.2  61.7   8.1
+SM-T970     34.5  54.8  10.6
+written results/v83/v83_results_C_im100.json

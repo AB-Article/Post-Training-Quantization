@@ -1,0 +1,45 @@
+== B1 L_path = a + s*x   (x = FP32 CPU latency, ms; both corpora; Theil-Sen)
+Redmi 13  CPU fp32     a=  0.00 ms  s= 1.00  R2= 1.00  med.rel.err=   0%  n=2452
+Redmi 13  CPU dynamic  a= -0.15 ms  s= 0.77  R2= 0.83  med.rel.err=  18%  n=2373
+Redmi 13  GPU fp32     a=  2.14 ms  s= 0.27  R2= 0.83  med.rel.err=  17%  n=2381
+Redmi 13  NPU fp32     a= -4.50 ms  s= 1.12  R2= 0.82  med.rel.err=  38%  n=2450
+Redmi 13  NPU int8     a= -1.81 ms  s= 0.54  R2= 0.82  med.rel.err=  34%  n=2358
+Redmi 13  NPU dynamic  a= -1.76 ms  s= 0.61  R2= 0.84  med.rel.err=  26%  n=2372
+   crossover NPU-int8 vs GPU-fp32: predicted L*=  14.43 ms; empirical 50% crossing x=  36.77 ms; P(path1 faster): x<2 ms 0.99, x>20 ms 0.25  (n=2304)
+   crossover NPU-dynamic vs GPU-fp32: predicted L*=  11.57 ms; empirical 50% crossing x=  29.91 ms; P(path1 faster): x<2 ms 1.00, x>20 ms 0.21  (n=2309)
+Pixel 4   CPU fp32     a=  0.00 ms  s= 1.00  R2= 1.00  med.rel.err=   0%  n=2330
+Pixel 4   CPU dynamic  a=  0.85 ms  s= 0.33  R2= 0.23  med.rel.err=  41%  n=2254
+Pixel 4   CPU int8     a=  0.05 ms  s= 0.75  R2= 0.32  med.rel.err=  34%  n=2128
+Pixel 4   GPU fp32     a=  1.25 ms  s= 0.14  R2= 0.41  med.rel.err=  41%  n=2252
+Pixel 4   NPU fp16     a= -0.18 ms  s= 0.56  R2= 0.32  med.rel.err=  45%  n=1714
+Pixel 4   NPU fp32     a=  5.18 ms  s= 0.24  R2= 0.06  med.rel.err=  38%  n=1796
+   crossover CPU-dynamic vs GPU-fp32: predicted L*=   2.05 ms; empirical 50% crossing x=   2.91 ms; P(path1 faster): x<2 ms 0.90, x>20 ms 0.37  (n=2184)
+   crossover NPU-fp16 vs GPU-fp32: predicted L*=   3.39 ms; empirical 50% crossing x=   3.40 ms; P(path1 faster): x<2 ms 0.99, x>20 ms 0.08  (n=1655)
+Tab S7+   CPU fp32     a=  0.00 ms  s= 1.00  R2= 1.00  med.rel.err=   0%  n=2479
+Tab S7+   CPU dynamic  a=  1.48 ms  s= 0.14  R2= 0.20  med.rel.err=  46%  n=2403
+Tab S7+   CPU int8     a= -0.46 ms  s= 0.38  R2= 0.34  med.rel.err=  46%  n=2352
+Tab S7+   GPU fp32     a=  1.59 ms  s= 0.07  R2= 0.33  med.rel.err=  36%  n=2401
+Tab S7+   NPU fp16     a= -0.77 ms  s= 0.30  R2= 0.39  med.rel.err=  57%  n=1825
+Tab S7+   NPU fp32     a=  5.45 ms  s= 0.14  R2= 0.09  med.rel.err=  30%  n=1940
+   crossover CPU-dynamic vs GPU-fp32: predicted L*=   1.60 ms; empirical 50% crossing x=   0.18 ms; P(path1 faster): x<2 ms 0.99, x>20 ms 0.38  (n=2333)
+   crossover NPU-fp16 vs GPU-fp32: predicted L*=  10.25 ms; empirical 50% crossing x=  21.14 ms; P(path1 faster): x<2 ms 0.96, x>20 ms 0.16  (n=1767)
+
+== B2 absolute regret (ms) of always-dynamic and best single artifact by quartile of model latency class (best feasible latency on slowest device)
+-- cifar10: quartile edges of model latency [ 0.93  4.84 19.69] ms
+   always dynamic  Q1 (median best latency   0.29 ms): mean abs regret  0.51 ms, median  0.26 ms, relative  131.5%  n=887
+   always dynamic  Q2 (median best latency   1.39 ms): mean abs regret  1.02 ms, median  0.20 ms, relative   40.5%  n=888
+   always dynamic  Q3 (median best latency   6.18 ms): mean abs regret  0.41 ms, median  0.02 ms, relative    5.1%  n=888
+   always dynamic  Q4 (median best latency  20.37 ms): mean abs regret  0.75 ms, median  0.00 ms, relative    2.1%  n=876
+   single artifact Q1 (median best latency   0.29 ms): mean abs regret  0.06 ms, median  0.00 ms, relative   11.0%  n=887
+   single artifact Q2 (median best latency   1.39 ms): mean abs regret  0.20 ms, median  0.00 ms, relative    9.6%  n=888
+   single artifact Q3 (median best latency   6.18 ms): mean abs regret  0.16 ms, median  0.00 ms, relative    2.0%  n=888
+   single artifact Q4 (median best latency  20.37 ms): mean abs regret  0.27 ms, median  0.00 ms, relative    0.9%  n=876
+-- imagenet100: quartile edges of model latency [ 10.33  30.12 102.23] ms
+   always dynamic  Q1 (median best latency   2.46 ms): mean abs regret  0.40 ms, median  0.05 ms, relative   11.6%  n=1269
+   always dynamic  Q2 (median best latency  11.06 ms): mean abs regret  0.48 ms, median  0.00 ms, relative    3.0%  n=1269
+   always dynamic  Q3 (median best latency  32.54 ms): mean abs regret  0.67 ms, median  0.03 ms, relative    2.0%  n=1248
+   always dynamic  Q4 (median best latency  82.64 ms): mean abs regret  0.60 ms, median  0.00 ms, relative    0.7%  n=1261
+   single artifact Q1 (median best latency   2.46 ms): mean abs regret  0.14 ms, median  0.01 ms, relative    4.6%  n=1269
+   single artifact Q2 (median best latency  11.06 ms): mean abs regret  0.20 ms, median  0.00 ms, relative    1.1%  n=1269
+   single artifact Q3 (median best latency  32.54 ms): mean abs regret  0.20 ms, median  0.00 ms, relative    0.5%  n=1248
+   single artifact Q4 (median best latency  82.64 ms): mean abs regret  0.22 ms, median  0.00 ms, relative    0.2%  n=1261

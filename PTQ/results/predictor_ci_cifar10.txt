@@ -1,0 +1,15 @@
+learned, offline features only   exact  54.7 [50.9, 58.3]  geo  6.3 [4.4, 8.3]  p90  13.1 [9.7, 21.8]
+learned, + device descr. (GBT)   exact  70.5 [66.6, 74.4]  geo  2.5 [1.8, 3.2]  p90   5.5 [3.9, 8.1]
+learned, + device descr. (RF)    exact  69.8 [66.0, 73.8]  geo  2.3 [1.7, 2.9]  p90   5.7 [3.9, 8.2]
+per-architecture oracle major.   exact  66.5 [63.8, 69.1]  geo  4.5 [3.2, 5.9]  p90  10.2 [7.8, 12.6]
+per-device majority (dev. only)  exact  56.8 [52.9, 60.7]  geo  5.2 [4.0, 6.5]  p90  10.2 [8.7, 12.8]
+global: dynamic INT8             exact  55.3 [51.2, 59.1]  geo  4.5 [3.2, 6.1]  p90   9.2 [7.9, 10.6]
+global: FP16                     exact  18.9 [15.9, 22.0]  geo 27.2 [22.9, 31.5]  p90 100.0 [91.7, 110.8]
+
+device-descriptor gain 15.8 pp, 95% CI [11.9, 19.9], P(gain>0)=100.0%
+geo-regret change -3.8 pp, 95% CI [-5.7, -2.0]
+
+selector vs oracle majority: exact +3.9 pp CI [-0.5, +8.6], P(>0)=95.6%
+selector vs oracle majority: geo-regret -2.0 pp CI [-3.4, -0.7], P(<0)=100.0%
+selector vs per-device majority: exact +13.6 pp CI [+10.0, +17.0], P(>0)=100.0%
+selector vs per-device majority: geo-regret -2.7 pp CI [-3.9, -1.5], P(<0)=100.0%

@@ -1,0 +1,41 @@
+model_name,model_family,device_paper_usb,device_aihub,paper_usb_tau099_winner_mode,paper_usb_tau099_latency_ms,paper_usb_tau099_accuracy_pct,paper_usb_pure_latency_winner_mode,paper_usb_pure_latency_ms,aihub_winner_mode,aihub_winner_latency_us,aihub_winner_latency_ms,match_aihub_vs_paper_tau099,match_aihub_vs_paper_pure_latency,aihub_fp32_us,aihub_fp16_us,aihub_dynamic_us,aihub_int8_us,aihub_mixed_us,paper_usb_fp32_ms,paper_usb_fp16_ms,paper_usb_dynamic_ms,paper_usb_int8_ms,paper_usb_mixed_ms,notes
+MobileNetV2,named,Pixel 4,Google Pixel 4,dynamic,8.958,67.70,dynamic,8.958,fp16,3362.0,3.362,N,N,3384.0,3362.0,3411.0,3780.0,3750.0,9.259,9.019,8.958,10.024,9.862,
+RegNet,named,Pixel 4,Google Pixel 4,fp32,12.612,91.50,fp32,12.612,fp16,4433.0,4.433,N,N,4469.0,4433.0,4477.0,4703.0,4764.0,12.612,12.644,12.661,13.382,13.121,
+SqueezeNet-1,named,Pixel 4,Google Pixel 4,int8,9.236,78.10,int8,9.236,dynamic,4913.0,4.913,N,N,4947.0,4949.0,4913.0,4955.0,5078.0,17.615,17.293,17.287,9.236,10.023,
+EfficientNet,named,Pixel 4,Google Pixel 4,fp16,10.111,60.10,fp16,10.111,dynamic,5190.0,5.190,N,N,5304.0,5408.0,5190.0,6254.0,6297.0,10.329,10.111,10.348,11.937,11.671,
+ShuffleNet,named,Pixel 4,Google Pixel 4,dynamic,22.202,88.50,int8,19.359,mixed,1900.0,1.900,N,N,3778.0,4386.0,4296.0,2347.0,1900.0,27.378,29.875,22.202,19.359,,
+ResNet,named,Pixel 4,Google Pixel 4,fp16,22.438,30.80,fp16,22.438,fp32,10793.0,10.793,N,N,10793.0,10800.0,10978.0,11101.0,11476.0,22.764,22.438,22.499,,,
+AlexNet,named,Pixel 4,Google Pixel 4,dynamic,26.457,87.80,dynamic,26.457,mixed,9684.0,9.684,N,N,17334.0,18211.0,10582.0,9873.0,9684.0,44.224,44.259,26.457,31.665,29.923,
+DenseNet,named,Pixel 4,Google Pixel 4,dynamic,14.241,8.90,dynamic,14.241,fp32,16364.0,16.364,N,N,16364.0,16496.0,16521.0,23257.0,23251.0,14.786,14.796,14.241,16.590,16.285,
+rag-ba0034d1574e8db788a8c2ce37088df4,rag,Pixel 4,Google Pixel 4,fp16,0.098,58.40,fp16,0.098,int8,402.0,0.402,N,N,825.0,594.0,590.0,402.0,731.0,0.534,0.098,0.214,,,
+rag-2c8f8b9e911aac6531de7ce91ef9d821,rag,Pixel 4,Google Pixel 4,fp16,0.383,38.40,fp16,0.383,fp32,463.0,0.463,N,N,463.0,762.0,910.0,1157.0,1153.0,1.190,0.383,1.225,0.855,0.868,
+rag-b8cd133bd7f662ce3fa7306ff70d6dfc,rag,Pixel 4,Google Pixel 4,fp16,0.385,31.80,fp16,0.385,fp32,417.0,0.417,N,N,417.0,561.0,767.0,1054.0,1190.0,0.950,0.385,1.302,,,
+rag-110eeb70432a3b9ada864a40e274bc7b,rag,Pixel 4,Google Pixel 4,fp16,1.414,43.80,fp16,1.414,int8,970.0,0.970,N,N,1155.0,1176.0,1161.0,970.0,1054.0,1.485,1.414,,1.483,1.473,
+rag-6cafa74a7b3bcc9564454529a52d1954,rag,Pixel 4,Google Pixel 4,fp16,1.326,61.70,fp16,1.326,fp32,1141.0,1.141,N,N,1141.0,1162.0,1145.0,1505.0,1319.0,1.371,1.326,1.393,1.447,1.363,
+rag-97b96ee33326178e841a93643a2d4bc2,rag,Pixel 4,Google Pixel 4,,,,,,fp16,1323.0,1.323,,,1389.0,1323.0,1340.0,1405.0,1396.0,,,,,,missing in paper best_ptq_labels
+rag-a88bed94d60c50a7e183391f01f91f0a,rag,Pixel 4,Google Pixel 4,fp32,1.512,64.80,fp32,1.512,dynamic,1919.0,1.919,N,N,1975.0,2063.0,1919.0,2027.0,2140.0,1.512,1.530,2.418,,,
+unq-586d9405ee0cae31158ae4562350ac5d,unq,Pixel 4,Google Pixel 4,fp16,1.280,50.20,fp16,1.280,fp16,3394.0,3.394,Y,Y,3546.0,3394.0,3543.0,3506.0,3660.0,1.301,1.280,1.298,1.358,1.324,
+unq-43639c70cb4cfa9a9943e015a80351cf,unq,Pixel 4,Google Pixel 4,dynamic,1.497,66.90,dynamic,1.497,fp32,5041.0,5.041,N,N,5041.0,5249.0,5080.0,5136.0,5091.0,1.555,1.519,1.497,1.511,1.578,
+unq-f1b81d27a39d43bdce8da6c45c3b9259,unq,Pixel 4,Google Pixel 4,dynamic,1.103,42.50,dynamic,1.103,dynamic,5686.0,5.686,Y,Y,5755.0,5759.0,5686.0,5791.0,5941.0,2.518,1.662,1.103,2.185,2.134,
+unq-05ac1482496ad85b42f59356e2f9e17b,unq,Pixel 4,Google Pixel 4,,,,,,mixed,6345.0,6.345,,,6464.0,6812.0,6395.0,6765.0,6345.0,,,,,,missing in paper best_ptq_labels
+unq-5c313adafbc65191b15d3876956fa100,unq,Pixel 4,Google Pixel 4,int8,6.379,88.90,int8,6.379,int8,8660.0,8.660,Y,Y,11175.0,10819.0,9602.0,8660.0,9262.0,9.872,10.153,6.606,6.379,7.052,
+MobileNetV2,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp32,9.017,67.40,fp32,9.017,fp16,2716.0,2.716,N,N,2720.0,2716.0,2731.0,2943.0,2985.0,9.017,9.057,9.164,10.348,10.090,paper=Tab S7+; AI Hub device=Tab S7
+RegNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,10.215,91.50,fp16,10.215,fp32,3919.0,3.919,N,N,3919.0,3974.0,3922.0,4056.0,4145.0,10.335,10.215,10.465,11.285,11.614,paper=Tab S7+; AI Hub device=Tab S7
+SqueezeNet-1,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,int8,10.575,78.10,int8,10.575,dynamic,3629.0,3.629,N,N,3726.0,3713.0,3629.0,3814.0,3865.0,15.203,15.190,15.216,10.575,11.536,paper=Tab S7+; AI Hub device=Tab S7
+EfficientNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp32,8.888,60.10,fp32,8.888,fp32,4484.0,4.484,Y,Y,4484.0,4566.0,4659.0,5402.0,5320.0,8.888,8.905,9.081,11.296,10.785,paper=Tab S7+; AI Hub device=Tab S7
+ShuffleNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,dynamic,33.026,88.50,int8,23.387,mixed,1871.0,1.871,N,N,3426.0,3647.0,4322.0,2228.0,1871.0,39.826,40.311,33.026,23.387,,paper=Tab S7+; AI Hub device=Tab S7
+ResNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp32,20.237,30.80,fp32,20.237,dynamic,8484.0,8.484,N,N,8527.0,8515.0,8484.0,8709.0,8771.0,20.237,20.294,20.302,,,paper=Tab S7+; AI Hub device=Tab S7
+AlexNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,dynamic,20.203,87.80,dynamic,20.203,int8,7668.0,7.668,N,N,14566.0,14788.0,7985.0,7668.0,7754.0,36.923,36.057,20.203,33.060,32.661,paper=Tab S7+; AI Hub device=Tab S7
+DenseNet,named,Galaxy Tab S7+,Samsung Galaxy Tab S7,dynamic,9.813,8.90,dynamic,9.813,fp32,14498.0,14.498,N,N,14498.0,14734.0,14576.0,20506.0,20690.0,16.208,15.861,9.813,20.638,19.993,paper=Tab S7+; AI Hub device=Tab S7
+rag-ba0034d1574e8db788a8c2ce37088df4,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,0.067,58.40,fp16,0.067,dynamic,441.0,0.441,N,N,462.0,451.0,441.0,649.0,1172.0,0.953,0.067,0.861,0.127,,paper=Tab S7+; AI Hub device=Tab S7
+rag-2c8f8b9e911aac6531de7ce91ef9d821,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,0.224,38.40,fp16,0.224,fp32,461.0,0.461,N,N,461.0,509.0,817.0,559.0,719.0,1.691,0.224,1.702,0.583,0.587,paper=Tab S7+; AI Hub device=Tab S7
+rag-b8cd133bd7f662ce3fa7306ff70d6dfc,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,0.222,31.80,fp16,0.222,dynamic,486.0,0.486,N,N,497.0,581.0,486.0,765.0,553.0,1.693,0.222,1.713,0.582,,paper=Tab S7+; AI Hub device=Tab S7
+rag-110eeb70432a3b9ada864a40e274bc7b,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp32,1.689,43.70,fp32,1.689,fp32,789.0,0.789,Y,Y,789.0,904.0,956.0,847.0,984.0,1.689,1.839,,1.785,1.819,paper=Tab S7+; AI Hub device=Tab S7
+rag-6cafa74a7b3bcc9564454529a52d1954,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,1.020,61.70,fp16,1.020,fp16,1031.0,1.031,Y,Y,1154.0,1031.0,1141.0,1174.0,1156.0,1.702,1.020,1.724,1.608,1.621,paper=Tab S7+; AI Hub device=Tab S7
+rag-97b96ee33326178e841a93643a2d4bc2,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,,,,,,dynamic,1123.0,1.123,,,1164.0,1175.0,1123.0,1182.0,1170.0,,,,,,paper=Tab S7+; AI Hub device=Tab S7; missing in paper best_ptq_labels
+rag-a88bed94d60c50a7e183391f01f91f0a,rag,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,1.408,64.70,fp16,1.408,fp16,1561.0,1.561,Y,Y,1575.0,1561.0,1566.0,1614.0,1589.0,1.738,1.408,4.622,1.933,,paper=Tab S7+; AI Hub device=Tab S7
+unq-586d9405ee0cae31158ae4562350ac5d,unq,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp32,1.655,50.20,fp32,1.655,dynamic,2332.0,2.332,N,N,2388.0,2383.0,2332.0,2415.0,2414.0,1.655,1.673,1.684,1.774,1.787,paper=Tab S7+; AI Hub device=Tab S7
+unq-43639c70cb4cfa9a9943e015a80351cf,unq,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,2.020,66.70,fp16,2.020,dynamic,3335.0,3.335,N,N,3354.0,3345.0,3335.0,3387.0,3400.0,2.047,2.020,2.037,2.082,2.117,paper=Tab S7+; AI Hub device=Tab S7
+unq-f1b81d27a39d43bdce8da6c45c3b9259,unq,Galaxy Tab S7+,Samsung Galaxy Tab S7,fp16,1.201,42.80,fp16,1.201,int8,4058.0,4.058,N,N,4149.0,4070.0,4137.0,4058.0,4107.0,4.547,1.201,3.467,1.585,1.581,paper=Tab S7+; AI Hub device=Tab S7
+unq-05ac1482496ad85b42f59356e2f9e17b,unq,Galaxy Tab S7+,Samsung Galaxy Tab S7,,,,,,dynamic,4329.0,4.329,,,4417.0,4411.0,4329.0,4496.0,4489.0,,,,,,paper=Tab S7+; AI Hub device=Tab S7; missing in paper best_ptq_labels
+unq-5c313adafbc65191b15d3876956fa100,unq,Galaxy Tab S7+,Samsung Galaxy Tab S7,dynamic,4.796,88.80,dynamic,4.796,int8,6123.0,6.123,N,N,8528.0,8058.0,6148.0,6123.0,6156.0,14.489,14.471,4.796,9.179,9.201,paper=Tab S7+; AI Hub device=Tab S7
